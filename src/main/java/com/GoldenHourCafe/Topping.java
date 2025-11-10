@@ -1,16 +1,27 @@
 package com.GoldenHourCafe;
 
 public class Topping {
+    private Boolean wantTopping; //optional
     private String name;  //name of topping
     private String type; //two types of toppings, premium/regular
     private Boolean extra;   //extra topping
     private double price;    //base price of topping
 
-    public Topping(String name, String type, Boolean extra, double price) {
+//constructor
+    public Topping(Boolean wantTopping, String name, String type, Boolean extra, double price) {
+        this.wantTopping = wantTopping;
         this.name = name;
         this.type = type;
         this.extra = extra;
         this.price = price;
+    }
+//get and set
+    public Boolean getWantTopping() {
+        return wantTopping;
+    }
+
+    public void setWantTopping(Boolean wantTopping) {
+        this.wantTopping = wantTopping;
     }
 
     public String getName() {
@@ -47,7 +58,6 @@ public class Topping {
 
     @Override
     public String toString() {
-        return name + " " + type + " " + extra + price;
-
+        return wantTopping+ " " + name + " " + type + " " + extra + price;
     }
 }
