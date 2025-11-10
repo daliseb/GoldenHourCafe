@@ -3,9 +3,9 @@ package com.GoldenHourCafe;
 import javax.swing.*;
 
 public class SmoothieBase {
-    private String size;
-    private String baseType;
-    private double price;
+    private String size;   //small medium large
+    private String baseType;  //what kind??
+    private double price;   //base price
 
 
     //constructors
