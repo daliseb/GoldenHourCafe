@@ -69,5 +69,3 @@ import java.util.Scanner;
             return result;
         }
     }
-
-}

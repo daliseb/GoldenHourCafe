@@ -42,10 +42,6 @@ public class SmoothieBase {
 
     @Override
     public String toString() {
-        return "SmoothieBase{" +
-                "size='" + size + '\'' +
-                ", baseType='" + baseType + '\'' +
-                ", price=" + price +
-                '}';
+        return size + " " + baseType + " " + price;
     }
 }
