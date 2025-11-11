@@ -36,8 +36,10 @@ public class Drizzle {
         this.price = price;
     }
 
+    @Override
+    public String toString() {
+        return wantDrizzle + " " + type + price;
 
-    
+    }
 
-    //to do, add override, fix string for price.
 }
