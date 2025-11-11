@@ -1,4 +1,4 @@
-package com.GoldenHourCafe;
+package com.GoldenHourCafe.ShopItems;
 
 public class Topping {
     private Boolean wantTopping; //optional

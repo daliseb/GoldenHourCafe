@@ -1,4 +1,4 @@
-package com.GoldenHourCafe;
+package com.GoldenHourCafe.UserInterface;
 import java.util.Scanner;
 
     public class ConsoleHelper {

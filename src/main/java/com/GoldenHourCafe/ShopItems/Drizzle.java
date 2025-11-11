@@ -1,4 +1,4 @@
-package com.GoldenHourCafe;
+package com.GoldenHourCafe.ShopItems;
 
 public class Drizzle {
     private Boolean wantDrizzle; //option for drizzle

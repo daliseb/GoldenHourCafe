@@ -1,4 +1,4 @@
-package com.GoldenHourCafe;
+package com.GoldenHourCafe.ShopItems;
 
 public class Juice {
     private Boolean wantDrink;  //drink is Not required, ask the user if wanted.

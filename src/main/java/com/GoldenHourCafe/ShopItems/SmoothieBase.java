@@ -1,12 +1,10 @@
-package com.GoldenHourCafe;
+package com.GoldenHourCafe.ShopItems;
 
-import javax.swing.*;
 
 public class SmoothieBase {
     private String size;   //small medium large
     private String baseType;  //what kind??
     private double price;   //base price
-
 
     //constructors
     public SmoothieBase(String size, String baseType, double price) {
@@ -39,6 +37,27 @@ public class SmoothieBase {
     public void setPrice(double price) {
         this.price = price;
     }
+//method to set the flavors of smoothie bases
+    public static SmoothieBase baseOption() {
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
 
     @Override
     public String toString() {

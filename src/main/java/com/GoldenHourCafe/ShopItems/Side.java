@@ -1,4 +1,4 @@
-package com.GoldenHourCafe;
+package com.GoldenHourCafe.ShopItems;
 
 public class Side {
     private Boolean wantSide; //a question, sides are NOT required.
