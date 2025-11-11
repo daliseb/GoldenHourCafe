@@ -3,9 +3,11 @@ package com.GoldenHourCafe;
 public class Side {
     private Boolean wantSide; //a question, sides are NOT required.
     private String type;
-    private String price;
+    private double price;
 
-    public Side(Boolean wantSide, String type, String price) {
+    //constructors
+
+    public Side(Boolean wantSide, String type, double price) {
         this.wantSide = wantSide;
         this.type = type;
         this.price = price;
@@ -27,11 +29,11 @@ public class Side {
         this.type = type;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 

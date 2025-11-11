@@ -3,15 +3,15 @@ package com.GoldenHourCafe;
 public class Juice {
     private Boolean wantDrink;  //drink is Not required, ask the user if wanted.
     private String type;   //what drink?
-    private String price;
+    private double price;
  //constructor
-    public Juice(Boolean wantDrink, String type, String price) {
+
+
+    public Juice(Boolean wantDrink, String type, double price) {
         this.wantDrink = wantDrink;
         this.type = type;
         this.price = price;
     }
-
-    //get and set
 
     public Boolean getWantDrink() {
         return wantDrink;
@@ -29,11 +29,11 @@ public class Juice {
         this.type = type;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
