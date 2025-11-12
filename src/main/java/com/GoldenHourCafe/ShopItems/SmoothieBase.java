@@ -48,6 +48,7 @@ public class SmoothieBase {
         System.out.println("2.Green Blend" + "(pineapple, spinach, kale, coconut water)\n");
         System.out.println("3.Peachy Beem" + "(peach, orange juice, pineapple)\n");
         System.out.println("4.Chocolate dream" + "(peanut butter, chocolate protein powder, almond milk, banana)\n");
+        System.out.println("0. Exit");
 
         //lines 53 and 54 were from last capstone
         int choice = ConsoleHelper.promptForInt("Enter Your Choice:");
@@ -75,6 +76,20 @@ public class SmoothieBase {
                 baseType = "Chocolate Dream";
                 basePrice = 8.00;
             }
+
+            case 0 -> {
+                System.out.println("Exiting program, come back soon!");
+            }
+
+            default ->
+                System.out.println("Invalid Entry! Please try again ˙◠˙");
+               
+
+
+
+
+
+
 
 
 
