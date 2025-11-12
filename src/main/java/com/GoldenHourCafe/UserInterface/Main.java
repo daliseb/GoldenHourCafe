@@ -6,8 +6,8 @@ public class Main {
     }
     //main is supposed to launch the main menu or home screen
     //added this from advanced car dealership
-    UserInterface ui = new UserInterface();
-        ui.display();
+//    UserInterface ui = new UserInterface();
+//        ui.display();
 
 
 }

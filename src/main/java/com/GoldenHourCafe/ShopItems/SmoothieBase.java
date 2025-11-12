@@ -44,33 +44,36 @@ public class SmoothieBase {
     public static SmoothieBase baseOption() {
         //lines 53 and 54 were from last capstone
         System.out.println("Choose Your Flavor");
-        System.out.println("1.Acai berry \n" + "(Mixed berry blend, acai, oat milk)\n");
-        System.out.println("2.Green Blend \n" + "(pineapple, spinach, kale, coconut water)\n");
-        System.out.println("3.Peachy Beem\n" + "(peach, orange juice, pineapple)\n");
-        System.out.println("4.Chocolate dream\n" + "(peanut butter, chocolate protein powder, almond milk, banana)\n");
+        System.out.println("1.Acai berry" + "(Mixed berry blend, acai, oat milk)\n");
+        System.out.println("2.Green Blend" + "(pineapple, spinach, kale, coconut water)\n");
+        System.out.println("3.Peachy Beem" + "(peach, orange juice, pineapple)\n");
+        System.out.println("4.Chocolate dream" + "(peanut butter, chocolate protein powder, almond milk, banana)\n");
 
         //lines 53 and 54 were from last capstone
-        String choice = ConsoleHelper.promptForString("Enter Your Choice:");
-        choice = choice.toUpperCase();
+        int choice = ConsoleHelper.promptForInt("Enter Your Choice:");
 
         String baseType;
         double basePrice;
     //default base price is 8.00 because the bowls are starting at the lowest price.
         switch(choice){
             case 1 -> {
-                baseType = "Acai berry"; basePrice = 8.00;
+                baseType = "Acai berry";
+                basePrice = 8.00;
             }
 
             case 2 -> {
-                baseType = "Green "; basePrice = 8.00;
+                baseType = "Green ";
+                basePrice = 8.00;
             }
 
             case 3 -> {
-                baseType = "Peachy Beem"; basePrice = 8.00;
+                baseType = "Peachy Beem";
+                basePrice = 8.00;
             }
 
             case 4 -> {
-                baseType = "Chocolate Dream"; basePrice = 8.00;
+                baseType = "Chocolate Dream";
+                basePrice = 8.00;
             }
 
 
