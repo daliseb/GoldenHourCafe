@@ -1,5 +1,6 @@
 package com.GoldenHourCafe.ShopItems;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Topping {
@@ -62,7 +63,11 @@ public class Topping {
 
     //array list has to be made, because user is choosing MULTIPLE toppings at once
     public static List<Topping> chooseToppings() {
-        List<Topping>
+        List<Topping> toppings = new ArrayList<>();
+
+        System.out.println("Select Your Toppings:");
+
+
 
 
 
