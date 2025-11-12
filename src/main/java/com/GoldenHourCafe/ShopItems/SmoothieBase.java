@@ -44,10 +44,14 @@ public class SmoothieBase {
         System.out.println("Select Your Flavor");
         System.out.println("-Acai berry \n" + "(Mixed berry blend, acai, oat milk)\n");
         System.out.println("-Green Blend \n" + "(pineapple, spinach, kale, coconut water)\n");
+        System.out.println("Peachy Beem\n" + "(peach, orange juice, pineapple)\n");
+        System.out.println("-Chocolate dream\n" + "(peanut butter, chocolate protein powder, almond milk, banana)\n");
 
 
 
-        
+
+
+
 
 
 
