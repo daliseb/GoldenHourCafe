@@ -69,21 +69,24 @@ public class Topping {
 
         System.out.println("Select Your Toppings:");
 
-        System.out.println("Regular Toppings: (Included)");
-        System.out.println("1.Cacao Nibs");
-        System.out.println("2.Chopped Strawberries");
-        System.out.println("3.Kiwi Slices");
-        System.out.println("4.Mango Slices");
-        System.out.println("5.Chopped Pineapple");
-        System.out.println("6.Coconut Shreds");
-
-        System.out.println("Premium Toppings: (Prices Vary)");
-        System.out.println("7.Sea Moss Gel");
-        System.out.println("8.Hemp Seeds");
-        System.out.println("9.Bee Pollen");
-        System.out.println("10.Protein Scoop (Vanilla)");
-        System.out.println("11.Protein Scoop (Chocolate)");
-        System.out.println("12.Scoop Of Collagen");
+        System.out.println("""
+                        --Regular Toppings: (Included)");
+                        1. Cacao Nibs
+                        2.Chopped Strawberries
+                        3.Kiwi Slices
+                        4.Mango Slices
+                        5.Chopped Pineapple
+                        6.Coconut Shreds
+                        
+                        Premium Toppings: (Prices Vary)
+                        7.Sea Moss Gel
+                        8.Hemp Seeds
+                        9.Bee Pollen
+                        10.Protein Scoop (Vanilla)
+                        11.Protein Scoop (Chocolate)
+                        12.Scoop Of Collagen
+                        
+                        """)
 
         //while loop is needed for the user being able to choose a topping without stopping until deciding to (:
         while(true) {
@@ -94,20 +97,26 @@ public class Topping {
             String type = (choice <= 3 ) ? "Regular" : "Premium";
             double basePrice = calculateToppingPrice(size,type);
 
-            switch(choice){
-                case 1 -> topping = new Topping(true,"Cacao Nibs", "Regular", false, basePrice);
-                case 2 -> topping = new Topping(true, "Chopped Strawberries", "Regular",false, basePrice );
-                case 3 -> topping = new Topping(true, "Kiwi Slices","Regular", false, basePrice );
-                case 4 -> topping = new Topping(true, "Mango Slices","Regular", false, basePrice );
+            switch(choice) {
+                case 1 -> topping = new Topping(true, "Cacao Nibs", "Regular", false, basePrice);
+                case 2 -> topping = new Topping(true, "Chopped Strawberries", "Regular", false, basePrice);
+                case 3 -> topping = new Topping(true, "Kiwi Slices", "Regular", false, basePrice);
+                case 4 -> topping = new Topping(true, "Mango Slices", "Regular", false, basePrice);
                 case 5 -> topping = new Topping(true, "Chopped Pineapple", "Regular", false, basePrice);
-                case 6 -> topping = new Topping(true,"Coconut Shreds", "Regular", false, basePrice );
-                case 7 ->
-                case 8 ->
-                case 9 ->
-                case 10 ->
-                case 11 ->
-                case 12 ->
-                default ->
+                case 6 -> topping = new Topping(true, "Coconut Shreds", "Regular", false, basePrice);
+                case 7 -> topping = new Topping(true, "Sea Moss Gel", "Premium", false, basePrice);
+                case 8 -> topping = new Topping(true, "Hemp Seeds", "Premium", false, basePrice);
+                case 9 -> topping = new Topping(true, "Bee Pollen", "Premium", false, basePrice);
+                case 10 -> topping = new Topping(true, "Protein Scoop (Vanilla)", "Premium", false, basePrice);
+                case 11 -> topping = new Topping(true, "Protein Scoop (Chocolate)", "Premium", false, basePrice);
+                case 12 -> topping = new Topping(true, "Scoop Of Collagen", "Premium", false, basePrice);
+                default -> System.out.println("Invalid Choice, Try Again");
+
+            }
+
+            if (topping != null &&
+
+
 
 
 
