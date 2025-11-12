@@ -54,10 +54,10 @@ public class SmoothieBase {
         //lines 53 and 54 were from last capstone
         int choice = ConsoleHelper.promptForInt("Enter Your Choice:");
 
-        String baseType;
-        double basePrice;
-    //default base price is 8.00 because the bowls are starting at the lowest price.
-        switch(choice) {
+        String baseType = "";
+        double basePrice = 0.00;
+        //default base price is 8.00 because the bowls are starting at the lowest price.
+        switch (choice) {
             case 1 -> {
                 baseType = "Acai berry";
                 basePrice = 8.00;
@@ -101,42 +101,22 @@ public class SmoothieBase {
             case "medium" -> 2.00;
             case "large" -> 4.00;
             default -> 0.0;
+            //does this leave room for user error? :( ^^
+        };
 
+        //smoothie final price is
 
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        }
-
-
-
-
+        double smoothieFinalPrice = basePrice + sizeAdjustment;
+        return new SmoothieBase(size, baseType, smoothieFinalPrice);
 
     }
-
-
 
     @Override
     public String toString() {
-        return size + " " + baseType + " " + price;
+        return size + " " + baseType + " $" + price;
+
     }
 }
+
+
+
