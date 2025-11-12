@@ -42,8 +42,8 @@ public class SmoothieBase {
 //method to set the flavors of smoothie bases
     public static SmoothieBase baseOption() {
         System.out.println("Select Your Flavor");
-        System.out.println("Acai berry \n" +
-                "(Mixed berry blend, acai, oat milk)\n");
+        System.out.println("-Acai berry \n" + "(Mixed berry blend, acai, oat milk)\n");
+        System.out.println("-Green Blend \n" + "(pineapple, spinach, kale, coconut water)\n");
 
 
 
