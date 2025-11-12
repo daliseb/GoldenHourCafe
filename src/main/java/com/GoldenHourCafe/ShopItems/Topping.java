@@ -114,7 +114,11 @@ public class Topping {
 
             }
 
-            if (topping != null &&
+            if (topping != null && type.equals("Premium")) {
+                boolean extra = ConsoleHelper.promptForBoolean
+
+
+            }
 
 
 

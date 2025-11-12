@@ -68,4 +68,13 @@ import java.util.Scanner;
             scanner.nextLine();
             return result;
         }
+//had to create a boolean prompt in console helper
+        public static boolean promptForBoolean(String prompt) {
+            System.out.print(prompt + ": ");
+            String input = scanner.nextLine().trim().toLowerCase();
+            return input.equals("y") || input.equals("yes");
+
+
+
+        }
     }
