@@ -94,6 +94,33 @@ public class Topping {
             String type = (choice <= 3 ) ? "Regular" : "Premium";
             double basePrice = calculateToppingPrice(size,type);
 
+            switch(choice){
+                case 1 -> topping = new Topping(true,"Cacao Nibs", "Regular", false, basePrice);
+                case 2 -> topping = new Topping(true, "Chopped Strawberries", "Regular",false, basePrice );
+                case 3 -> topping = new Topping(true, "Kiwi Slices","Regular", false, basePrice );
+                case 4 -> topping = new Topping(true, "Mango Slices","Regular", false, basePrice );
+                case 5 ->
+                case 6 ->
+                case 7 ->
+                case 8 ->
+                case 9 ->
+                case 10 ->
+                case 11 ->
+                case 12 ->
+                default ->
+
+
+
+
+
+
+
+
+
+
+
+            }
+
 
 
 
