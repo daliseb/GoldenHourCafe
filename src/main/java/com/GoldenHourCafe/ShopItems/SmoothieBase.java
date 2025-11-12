@@ -40,12 +40,10 @@ public class SmoothieBase {
         this.price = price;
     }
 
-//method to set the flavors of smoothie bases
+    //method to set the flavors of smoothie bases
     public static SmoothieBase baseOption() {
         //lines 53 and 54 were from last capstone
-        String choice = ConsoleHelper.promptForString("Select your base");
-        choice = choice.toUpperCase();
-
+        System.out.println("Choose Your Flavor");
         System.out.println("1.Acai berry \n" + "(Mixed berry blend, acai, oat milk)\n");
         System.out.println("2.Green Blend \n" + "(pineapple, spinach, kale, coconut water)\n");
         System.out.println("3.Peachy Beem\n" + "(peach, orange juice, pineapple)\n");
@@ -55,33 +53,37 @@ public class SmoothieBase {
         String choice = ConsoleHelper.promptForString("Enter Your Choice:");
         choice = choice.toUpperCase();
 
-        
+        String baseType;
+        double basePrice;
+    //default base price is 8.00 because the bowls are starting at the lowest price.
+        switch(choice){
+            case 1 -> {
+                baseType = "Acai berry"; basePrice = 8.00;
+            }
+
+            case 2 -> {
+                baseType = "Green "; basePrice = 8.00;
+            }
+
+            case 3 -> {
+                baseType = "Peachy Beem"; basePrice = 8.00;
+            }
+
+            case 4 -> {
+                baseType = "Chocolate Dream"; basePrice = 8.00;
+            }
 
 
 
 
 
-
-
-
-
-
-
-
-
-
+        }
 
 
 
 
 
     }
-
-
-
-
-
-
 
 
 
