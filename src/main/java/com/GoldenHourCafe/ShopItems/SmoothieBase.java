@@ -1,6 +1,7 @@
 package com.GoldenHourCafe.ShopItems;
 
 
+
 public class SmoothieBase {
     private String size;   //small medium large
     private String baseType;  //what kind??
@@ -39,6 +40,11 @@ public class SmoothieBase {
     }
 //method to set the flavors of smoothie bases
     public static SmoothieBase baseOption() {
+
+        
+
+
+
 
 
 
