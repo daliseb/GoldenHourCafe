@@ -91,7 +91,18 @@ public class SmoothieBase {
         }
 
         //modifying our sizes:
+
+        System.out.println("Choose a size:");
+        System.out.println("1. Small");
+        System.out.println("2.Medium");
+        System.out.println("3.Large");
+
         
+
+        }
+
+
+
 
 
 
