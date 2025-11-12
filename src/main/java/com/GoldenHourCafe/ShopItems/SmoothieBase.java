@@ -48,6 +48,7 @@ public class SmoothieBase {
         System.out.println("2.Green Blend" + "(pineapple, spinach, kale, coconut water)\n");
         System.out.println("3.Peachy Beem" + "(peach, orange juice, pineapple)\n");
         System.out.println("4.Chocolate dream" + "(peanut butter, chocolate protein powder, almond milk, banana)\n");
+        System.out.println("5.No Smoothie");
         System.out.println("0. Exit");
 
         //lines 53 and 54 were from last capstone
@@ -56,7 +57,7 @@ public class SmoothieBase {
         String baseType;
         double basePrice;
     //default base price is 8.00 because the bowls are starting at the lowest price.
-        switch(choice){
+        switch(choice) {
             case 1 -> {
                 baseType = "Acai berry";
                 basePrice = 8.00;
@@ -77,13 +78,24 @@ public class SmoothieBase {
                 basePrice = 8.00;
             }
 
+            case 5 -> {
+                System.out.println("No Smoothie");
+                basePrice = 0.0;
+            }
+
             case 0 -> {
                 System.out.println("Exiting program, come back soon!");
             }
 
-            default ->
+            default -> {
                 System.out.println("Invalid Entry! Please try again ˙◠˙");
-               
+            }
+        }
+
+        //modifying our sizes:
+
+
+
 
 
 
