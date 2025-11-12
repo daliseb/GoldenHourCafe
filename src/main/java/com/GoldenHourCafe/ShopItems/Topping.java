@@ -91,13 +91,13 @@ public class Topping {
         //while loop is needed for the user being able to choose a topping without stopping until deciding to (:
         while(true) {
             int choice = ConsoleHelper.promptForInt("Select Your Topping: (number only please)");
-            if (choice == 0 ) break;
+            if (choice == 0) break;
 
             Topping topping = null;
-            String type = (choice <= 3 ) ? "Regular" : "Premium";
-            double basePrice = calculateToppingPrice(size,type);
+            String type = (choice <= 3) ? "Regular" : "Premium";
+            double basePrice = calculateToppingPrice(size, type);
 
-            switch(choice) {
+            switch (choice) {
                 case 1 -> topping = new Topping(true, "Cacao Nibs", "Regular", false, basePrice);
                 case 2 -> topping = new Topping(true, "Chopped Strawberries", "Regular", false, basePrice);
                 case 3 -> topping = new Topping(true, "Kiwi Slices", "Regular", false, basePrice);
@@ -113,34 +113,25 @@ public class Topping {
                 default -> System.out.println("Invalid Choice, Try Again");
 
             }
-
+//if statement
             if (topping != null && type.equals("Premium")) {
-                boolean extra = ConsoleHelper.promptForBoolean
+                boolean extra = ConsoleHelper.promptForBoolean("Extra Topping? (y/n");
 
-
-            }
-
-
-
-
-
-
-
-
-
-
-
-
+                if (extra) {
+                    topping.extra = true;
+                    topping.price += calculateExtraPremiumPrize(size);
+                }
 
             }
 
+            if (topping != null) {
+                toppings.add(topping);
+                System.out.println("you have added" + topping);
 
 
-
-
-
-
+            }
         }
+        return toppings;
 
 
 
@@ -153,14 +144,9 @@ public class Topping {
 
 
 
-    }
 
 
-
-
-
-
-
+            }
 
 
 
