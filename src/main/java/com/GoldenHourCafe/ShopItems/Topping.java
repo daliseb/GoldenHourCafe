@@ -86,7 +86,7 @@ public class Topping {
                         11.Protein Scoop (Chocolate)
                         12.Scoop Of Collagen
                         
-                        """)
+                        """);
 
         //while loop is needed for the user being able to choose a topping without stopping until deciding to (:
         while(true) {

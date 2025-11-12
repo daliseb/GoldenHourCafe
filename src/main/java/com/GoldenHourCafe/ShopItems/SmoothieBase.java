@@ -41,14 +41,15 @@ public class SmoothieBase {
     //method to set the flavors of smoothie bases
     public static SmoothieBase baseOption() {
         //lines 53 and 54 were from last capstone
-        System.out.println("Choose Your Flavor");
-        System.out.println("1.Acai berry" + "(Mixed berry blend, acai, oat milk)\n");
-        System.out.println("2.Green Blend" + "(pineapple, spinach, kale, coconut water)\n");
-        System.out.println("3.Peachy Beem" + "(peach, orange juice, pineapple)\n");
-        System.out.println("4.Chocolate dream" + "(peanut butter, chocolate protein powder, almond milk, banana)\n");
-        System.out.println("5.No Smoothie");
-        System.out.println("0. Exit");
-
+        System.out.println("""
+                           ( --Regular Toppings: (Included)");
+                             1.Acai berry" + "(Mixed berry blend, acai, oat milk)
+                             2.Green Blend" + "(pineapple, spinach, kale, coconut water)
+                             3.Peachy Beem" + "(peach, orange juice, pineapple)
+                             4.Chocolate dream" + "(peanut butter, chocolate protein powder, almond milk, banana)
+                             5.No Smoothie"
+                             0. Exit
+                           """);
         //lines 53 and 54 were from last capstone
         int choice = ConsoleHelper.promptForInt("Enter Your Choice:");
 
