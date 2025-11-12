@@ -38,8 +38,14 @@ public class SmoothieBase {
     public void setPrice(double price) {
         this.price = price;
     }
+
 //method to set the flavors of smoothie bases
     public static SmoothieBase baseOption() {
+        System.out.println("Select Your Flavor");
+        System.out.println("Acai berry \n" +
+                "(Mixed berry blend, acai, oat milk)\n");
+
+
 
         
 
