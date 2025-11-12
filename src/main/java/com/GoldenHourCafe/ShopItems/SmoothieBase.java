@@ -93,10 +93,22 @@ public class SmoothieBase {
         }
 
         //modifying our sizes:
+        //decided to size to lower case to prevent user error
 
         String size = ConsoleHelper.promptForString("Type the size: (Small, Medium, Large");
+        double sizeAdjustment = switch (size.toLowerCase()) {
+            case "small" -> 0.00;
+            case "medium" -> 2.00;
+            case "large" -> 4.00;
+            default -> 0.0;
 
-        
+
+        }
+
+
+
+
+
 
 
 
