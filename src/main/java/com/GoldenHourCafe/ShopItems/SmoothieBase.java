@@ -60,31 +60,25 @@ public class SmoothieBase {
                 baseType = "Acai berry";
                 basePrice = 8.00;
             }
-
             case 2 -> {
                 baseType = "Green ";
                 basePrice = 8.00;
             }
-
             case 3 -> {
                 baseType = "Peachy Beem";
                 basePrice = 8.00;
             }
-
             case 4 -> {
                 baseType = "Chocolate Dream";
                 basePrice = 8.00;
             }
-
             case 5 -> {
                 System.out.println("No Smoothie");
                 basePrice = 0.0;
             }
-
             case 0 -> {
                 System.out.println("Exiting program, come back soon!");
             }
-
             default -> {
                 System.out.println("Invalid Entry! Please try again ˙◠˙");
             }
@@ -97,21 +91,29 @@ public class SmoothieBase {
         System.out.println("2.Medium");
         System.out.println("3.Large");
 
-        
+        int pickSize = ConsoleHelper.promptForInt("Enter Your Choice:");
+        String size = "";
+        double sizeAdjustment = 0;
+
+        switch(pickSize) {
+            case 1 -> {
+                size = "small";
+                sizeAdjustment = 1.00;
+            }
+
+            case 2 -> {
+                size = "medium";
+                sizeAdjustment = 2.00;
+            }
+
+
+            case 3 -> {
+                size = "large";
+                sizeAdjustment = 4.00;
+            }
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
+        
         //smoothie final price is the base PLUS the adjustment size price
         double smoothieFinalPrice = basePrice + sizeAdjustment;
         return new SmoothieBase(size, baseType, smoothieFinalPrice);
