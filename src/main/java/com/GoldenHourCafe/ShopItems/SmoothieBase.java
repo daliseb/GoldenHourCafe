@@ -42,16 +42,20 @@ public class SmoothieBase {
 
 //method to set the flavors of smoothie bases
     public static SmoothieBase baseOption() {
-        System.out.println("Select Your Flavor");
+        //lines 53 and 54 were from last capstone
+        String choice = ConsoleHelper.promptForString("Select your base");
+        choice = choice.toUpperCase();
+
         System.out.println("1.Acai berry \n" + "(Mixed berry blend, acai, oat milk)\n");
         System.out.println("2.Green Blend \n" + "(pineapple, spinach, kale, coconut water)\n");
         System.out.println("3.Peachy Beem\n" + "(peach, orange juice, pineapple)\n");
         System.out.println("4.Chocolate dream\n" + "(peanut butter, chocolate protein powder, almond milk, banana)\n");
 
-
         //lines 53 and 54 were from last capstone
         String choice = ConsoleHelper.promptForString("Enter Your Choice:");
         choice = choice.toUpperCase();
+
+        
 
 
 
