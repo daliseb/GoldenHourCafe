@@ -94,6 +94,12 @@ public class SmoothieBase {
 
         //modifying our sizes:
 
+        String size = ConsoleHelper.promptForString("Type the size: (Small, Medium, Large");
+
+        
+
+
+
 
 
 
