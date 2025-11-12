@@ -85,8 +85,18 @@ public class Topping {
         System.out.println("11.Protein Scoop (Chocolate)");
         System.out.println("12.Scoop Of Collagen");
 
+        //while loop is needed for the user being able to choose a topping without stopping until deciding to (:
         while(true) {
             int choice = ConsoleHelper.promptForInt("Select Your Topping: (number only please)");
+            if (choice == 0 ) break;
+
+            Topping topping = null;
+            String type = (choice <= 3 ) ? "Regular" : "Premium";
+            double basePrice = calculateToppingPrice(size,type);
+
+
+
+
 
 
 
