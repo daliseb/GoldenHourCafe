@@ -1,5 +1,7 @@
 package com.GoldenHourCafe.ShopItems;
 
+import java.util.List;
+
 public class Topping {
     private Boolean wantTopping; //optional
     private String name;  //name of topping
@@ -55,6 +57,26 @@ public class Topping {
     public void setPrice(double price) {
         this.price = price;
     }
+
+
+
+    //array list has to be made, because user is choosing MULTIPLE toppings at once
+    public static List<Topping> chooseToppings() {
+        List<Topping>
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
 
     @Override
     public String toString() {
