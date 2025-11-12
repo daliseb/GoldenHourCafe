@@ -99,8 +99,8 @@ public class Topping {
                 case 2 -> topping = new Topping(true, "Chopped Strawberries", "Regular",false, basePrice );
                 case 3 -> topping = new Topping(true, "Kiwi Slices","Regular", false, basePrice );
                 case 4 -> topping = new Topping(true, "Mango Slices","Regular", false, basePrice );
-                case 5 ->
-                case 6 ->
+                case 5 -> topping = new Topping(true, "Chopped Pineapple", "Regular", false, basePrice);
+                case 6 -> topping = new Topping(true,"Coconut Shreds", "Regular", false, basePrice );
                 case 7 ->
                 case 8 ->
                 case 9 ->
