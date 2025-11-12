@@ -1,5 +1,7 @@
 package com.GoldenHourCafe.ShopItems;
 
+import com.GoldenHourCafe.UserInterface.ConsoleHelper;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -65,7 +67,9 @@ public class Topping {
     public static List<Topping> chooseToppings() {
         List<Topping> toppings = new ArrayList<>();
 
-        System.out.println("Select Your Toppings: (Included)");
+        System.out.println("Select Your Toppings:");
+
+        System.out.println("Regular Toppings: (Included)");
         System.out.println("1.Cacao Nibs");
         System.out.println("2.Chopped Strawberries");
         System.out.println("3.Kiwi Slices");
@@ -73,10 +77,21 @@ public class Topping {
         System.out.println("5.Chopped Pineapple");
         System.out.println("6.Coconut Shreds");
 
-        System.out.println("");
+        System.out.println("Premium Toppings: (Prices Vary)");
+        System.out.println("7.Sea Moss Gel");
+        System.out.println("8.Hemp Seeds");
+        System.out.println("9.Bee Pollen");
+        System.out.println("10.Protein Scoop (Vanilla)");
+        System.out.println("11.Protein Scoop (Chocolate)");
+        System.out.println("12.Scoop Of Collagen");
+
+        while(true) {
+            int choice = ConsoleHelper.promptForInt("Select Your Topping: (number only please)");
 
 
-        System.out.println("");
+
+        }
+
 
 
 
