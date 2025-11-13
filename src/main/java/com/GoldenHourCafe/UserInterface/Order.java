@@ -31,15 +31,24 @@ public class Order {
                 }
             }
         }
-        //addsmothhie base
+//addSmoothie base
+        public static void addSmoothieBase(){
+
+        }
+
+
+
 
 
         //addjuice
+        addJuice();
 
 
         //addside
+        addSide();
 
         //checkout
+        checkOut();
     }
 }
 
