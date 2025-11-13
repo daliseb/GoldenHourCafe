@@ -138,7 +138,8 @@ public class Topping {
     //need to calculate topping price:
         private static double calculateToppingPrice(String size, String type){
             return switch(type) {
-                
+                case "Regular" -> (size.toLowerCase());
+
 
 
 
