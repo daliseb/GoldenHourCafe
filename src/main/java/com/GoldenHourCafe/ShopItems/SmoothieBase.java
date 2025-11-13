@@ -116,13 +116,16 @@ public class SmoothieBase {
         //smoothie final price is the base PLUS the adjustment size price
         double smoothieFinalPrice = basePrice + sizeAdjustment;
         return new SmoothieBase(size, baseType, smoothieFinalPrice);
-        
-        @Override
-        public String toString () {
-            return size + " " + baseType + " $" + price;
 
-        }
+
     }
+
+    @Override
+    public String toString() {
+        return size + " " + baseType + " $" + price;
+
+    }
+}
 
 
 
