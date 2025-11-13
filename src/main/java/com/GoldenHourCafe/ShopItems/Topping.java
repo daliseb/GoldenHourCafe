@@ -70,7 +70,7 @@ public class Topping {
         System.out.println("Select Your Toppings:");
 
         System.out.println("""
-                        --Regular Toppings: (Included)");
+                        --Regular Toppings: (Included);
                         1. Cacao Nibs
                         2.Chopped Strawberries
                         3.Kiwi Slices
@@ -117,7 +117,7 @@ public class Topping {
             }
 //if statement to prompt the action of calculating the prem
             if (topping != null && type.equals("Premium")) {
-                boolean extra = ConsoleHelper.promptForBoolean("Extra Topping? (y/n");
+                boolean extra = ConsoleHelper.promptForBoolean("Extra Topping? (y/n)");
 
                 if (extra) {
                     topping.extra = true;
@@ -128,30 +128,23 @@ public class Topping {
 
             if (topping != null) {
                 toppings.add(topping);
-                System.out.println("you have added" + topping);
+                System.out.println("you have added" + topping.getName());
 
 
             }
         }
         return toppings;
+        }
+    //need to calculate topping price:
+        private static double calculateToppingPrice(String size, String type){
+            return switch(type) {
+                
 
-        private static double finalToppingPrice(String size,String type){
-            return
+
+
+            }
 
         }
-
-
-        //need to calculate topping price:
-
-
-
-
-
-
-
-
-
-
 
 
 
