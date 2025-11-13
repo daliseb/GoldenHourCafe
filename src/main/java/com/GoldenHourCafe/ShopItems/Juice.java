@@ -55,12 +55,23 @@ public class Juice {
                   (Strawberries, Orange Juice, Coconut water, Dates)
                 
                 """);
-
+        //first we need to ask the user whether they want a drink:
         boolean wantDrink = ConsoleHelper.promptForBoolean("Would you like to add a drink? (y/n");
         if (!wantDrink) {
             System.out.println("No Drink Added");
-            return new Juice(false, "none",0.00 );
+            return new Juice(false, "none", 0.00);
         }
+
+        int choice;
+        while (true) {
+            choice = ConsoleHelper.promptForInt("Select Your Drink (1-5)");
+            if (choice >= 1 && choice <= 4) break;
+            System.out.println("Invalid Choice! Please Select (1-5)");
+        }
+
+        String
+
+
     }
 
     //finish this tomorrow. add method or if statement to store the user input here:
