@@ -61,11 +61,11 @@ public class Drizzle {
         //switch case here to convert answers to a numerical value:
         private static String getDrizzleName(int choice) {
             return switch(choice){
-                case 1
-                case 2
-                case 3
-                case 4
-                case 5
+                case 1 -> "Peanut Butter";
+                case 2 ->"";
+                case 3 ->"";
+                case 4 ->"";
+                case 5 ->"";
 
 
             };
