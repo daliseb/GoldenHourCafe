@@ -2,8 +2,6 @@ package com.GoldenHourCafe.ShopItems;
 
 import com.GoldenHourCafe.UserInterface.ConsoleHelper;
 
-import javax.print.attribute.standard.Sides;
-
 public class Side {
     private Boolean wantSide; //a question, sides are NOT required.
     private String type;
