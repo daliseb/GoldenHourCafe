@@ -57,17 +57,30 @@ public class Side {
         }
 
         int choice;
-        while(true){
+        while (true) {
             choice = ConsoleHelper.promptForInt("Select Your Side (1-2)");
             if (choice >= 1 && choice <= 2) break;
             System.out.println("Invalid Choice, Select (1-2)");
         }
 
-
+        //this is setting thr starting price, all sides are same price and start at $3
+        String type = getSideName(choice);
+        double price = 3.00;
+        System.out.println("Side Has Been Added To Cart!" + " " + type + " " + price);
+        return new Side(true, type, price);
     }
-//    @Override
-//    public String toString() {
-//        return wantSide + " " + type + " " + price;
-//    }
+    private static String getSideName(int choice){
+        return switch (choice){
+            case 1 -> "Banana Oat Muffin";
+            case 2 -> "Chocolate Protein Bites";
+            default -> "None";
+        };
+    }
+        @Override
+    public String toString() {
+        return wantSide + " " + type + " " + price;
+    }
 }
+
+
 
