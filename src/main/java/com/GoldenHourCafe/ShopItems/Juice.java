@@ -56,7 +56,7 @@ public class Juice {
                 
                 """);
         //first we need to ask the user whether they want a drink:
-        boolean wantDrink = ConsoleHelper.promptForBoolean("Would you like to add a drink? (y/n");
+        boolean wantDrink = ConsoleHelper.promptForBoolean("Would you like to add a drink? (y/n)");
         if (!wantDrink) {
             System.out.println("No Drink Added");
             return new Juice(false, "none", 0.00);
@@ -70,7 +70,7 @@ public class Juice {
         }
     //so I can call it in my order class
         String type = getJuiceName(choice);
-        double price = getJuicePrice(choice);
+        double price = getJuicePrice(size);
 
         System.out.println("Juice Has Been Added To Cart!" + " " + type + " " + price );
         return new Juice(true, type, price );
@@ -86,7 +86,7 @@ public class Juice {
 
         };
     }
-    private static double getJuicePrice(int choice){
+    private static double getJuicePrice(int size){
         return switch (size){
             case 1 -> 6.00; //small
             case 2 -> 8.00; //medium
@@ -95,7 +95,6 @@ public class Juice {
         };
 
     }
-random
 
     @Override
     public String toString() {
