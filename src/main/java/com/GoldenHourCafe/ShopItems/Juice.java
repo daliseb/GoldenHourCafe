@@ -39,7 +39,7 @@ public class Juice {
         this.price = price;
     }
 //prompt the user to select juice if wanted
-    public static Juice optionForJuice() {
+    public static Juice optionForJuice (int size) {
         System.out.println("""
                 --- Cold Pressed Juice:
                 1.Green Juice
@@ -64,24 +64,42 @@ public class Juice {
 
         int choice;
         while (true) {
-            choice = ConsoleHelper.promptForInt("Select Your Drink (1-5)");
+            choice = ConsoleHelper.promptForInt("Select Your Drink (1-4)");
             if (choice >= 1 && choice <= 4) break;
-            System.out.println("Invalid Choice! Please Select (1-5)");
+            System.out.println("Invalid Choice! Please Select (1-4)");
         }
-    //so i can call it in my order class
+    //so I can call it in my order class
         String type = getJuiceName(choice);
         double price = getJuicePrice(choice);
+
         System.out.println("Juice Has Been Added To Cart!" + " " + type + " " + price );
         return new Juice(true, type, price );
+    }
+    //switch case for juice menu choices
+    private static String getJuiceName(int choice) {
+        return switch (choice) {
+            case 1 -> "Green Juice";
+            case 2 -> "Sunrise Juice";
+            case 3 -> "Berry Babe";
+            case 4 -> "Strawberry Dream";
+            default -> "None";
 
+        };
+    }
+    private static double getJuicePrice(int choice){
+        return switch (size){
+            case 1 -> 6.00; //small
+            case 2 -> 8.00; //medium
+            case 3 -> 10.00; //large
+            default -> 6.00; //default for small
+        }
 
     }
-
-    //finish this tomorrow. add method or if statement to store the user input here:
 
 
     @Override
     public String toString() {
         return wantDrink + " " + type + price;
     }
-}
+    }
+
