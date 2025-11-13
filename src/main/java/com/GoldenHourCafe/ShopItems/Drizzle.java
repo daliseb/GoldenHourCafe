@@ -32,7 +32,13 @@ public class Drizzle {
 
 
     public static Drizzle optionForDrizzle(){
-        List<Topping> toppings = new ArrayList<>();
+        System.out.println(""""
+          ----Select Your Drizzle!----
+          1.
+          2.
+          3.
+          4.
+          ");
 
 
 
