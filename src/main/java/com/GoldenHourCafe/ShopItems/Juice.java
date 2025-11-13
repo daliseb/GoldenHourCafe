@@ -66,7 +66,6 @@ public class Juice {
     //finish this tomorrow. add method or if statement to store the user input here:
 
 
-
     @Override
     public String toString() {
         return wantDrink + " " + type + price;
