@@ -1,10 +1,13 @@
 package com.GoldenHourCafe.ShopItems;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Drizzle {
     private Boolean wantDrizzle; //option for drizzle
     private String type;  //what kind
 
-    //price was deleted because the drizzle IS included in the order and acquires not additional cost.
+    //price was deleted because the drizzle IS included in the order and acquires no additional cost.
 
     public Drizzle(Boolean wantDrizzle, String type) {
         this.wantDrizzle = wantDrizzle;
@@ -26,6 +29,27 @@ public class Drizzle {
     public void setType(String type) {
         this.type = type;
     }
+
+
+    public static Drizzle optionForDrizzle(){
+        List<Topping> toppings = new ArrayList<>();
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     @Override
