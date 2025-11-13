@@ -8,13 +8,23 @@ public class SmoothieBase {
     private String size;   //small medium large
     private String baseType;  //what kind??
     private double price;   //base price
+    private ArrayList<Topping> toppings = new ArrayList<>();
+    private Drizzle drizzle;
 
     //constructors
-    public SmoothieBase(String size, String baseType, double price) {
+    public SmoothieBase(String size, String baseType, double price, ArrayList<Topping> toppings,Drizzle drizzle) {
         this.size = size;
         this.baseType = baseType;
         this.price = price;
+        this.toppings = toppings;
+        this.drizzle =drizzle;
+
+
     }
+    public SmoothieBase(){
+
+    }
+
 
     //getters and setters
     public String getSize() {
@@ -41,8 +51,26 @@ public class SmoothieBase {
         this.price = price;
     }
 
+    public ArrayList<Topping> getToppings() {
+        return toppings;
+    }
+
+    public void setToppings(ArrayList<Topping> toppings) {
+        this.toppings = toppings;
+    }
+
+    public Drizzle getDrizzle() {
+        return drizzle;
+    }
+
+    public void setDrizzle(Drizzle drizzle) {
+        this.drizzle = drizzle;
+    }
+
     //method to set the flavors of smoothie bases
-    public static SmoothieBase baseOption() {
+    public SmoothieBase baseOption() {
+        SmoothieBase order = new SmoothieBase();
+
         //lines 53 and 54 were from last capstone
         System.out.println("""
                 ( --Choose Your Base:");
@@ -91,7 +119,7 @@ public class SmoothieBase {
         System.out.println("2.Medium");
         System.out.println("3.Large");
 
-        int pickSize = ConsoleHelper.promptForInt("Enter Your Choice:");
+        int pickSize = ConsoleHelper.promptForInt("Enter Your Choice");
         String size = "";
         double sizeAdjustment = 0;
 
@@ -114,8 +142,12 @@ public class SmoothieBase {
         }
 
         //smoothie final price is the base PLUS the adjustment size price
-        double smoothieFinalPrice = basePrice + sizeAdjustment;
-        return new SmoothieBase(size, baseType, smoothieFinalPrice);
+        double smoothieBaseFinalPrice = basePrice + sizeAdjustment;
+        order.setToppings(Topping.chooseToppings(pickSize));
+        order.setDrizzle(Drizzle.optionForDrizzle());
+
+
+        return new SmoothieBase(size, baseType, smoothieBaseFinalPrice, getToppings(), getDrizzle());
 
 
     }

@@ -29,7 +29,7 @@ public class Drizzle {
         this.type = type;
     }
 
-    public static Drizzle optionForDrizzle(String type) {
+    public static Drizzle optionForDrizzle() {
         System.out.println("""
                 ----Select Your Drizzle!----
                 1.Peanut Butter
@@ -55,7 +55,7 @@ public class Drizzle {
 
         //following same structure as Juice class:
         String drizzleType = getDrizzleName(choice);
-        System.out.println("Drizzle Has Been Added!" + " " + type);
+        System.out.println("Drizzle Has Been Added!" + " " + getDrizzleName(choice));
         return new Drizzle(true, drizzleType);
     }
 

@@ -15,6 +15,10 @@ public class Juice {
         this.price = price;
     }
 
+    public Juice(){
+
+    }
+
     public Boolean getWantDrink() {
         return wantDrink;
     }
