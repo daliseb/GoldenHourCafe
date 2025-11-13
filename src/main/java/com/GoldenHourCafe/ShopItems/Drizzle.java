@@ -1,5 +1,7 @@
 package com.GoldenHourCafe.ShopItems;
 
+import com.GoldenHourCafe.UserInterface.ConsoleHelper;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,6 +42,8 @@ public class Drizzle {
           4.Organic Greek Yogurt
           5.Agave
           """);
+
+        boolean wantDrizzle = ConsoleHelper.promptForBoolean("Would You Like Drizzle? (y/n)");
 
 
 
