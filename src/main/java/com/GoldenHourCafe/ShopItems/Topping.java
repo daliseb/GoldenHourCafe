@@ -89,7 +89,7 @@ public class Topping {
                         """);
 
         //while loop is needed for the user being able to choose a topping without stopping until deciding to (:
-        while(true) {
+        while(true){
             int choice = ConsoleHelper.promptForInt("Select Your Topping: (number only please)");
             System.out.println("Choose Option, 0 when finished");
             if (choice == 0) break;
@@ -156,27 +156,12 @@ public class Topping {
 
                 default -> 0.00;
 
-
                 };
-
-
-
-
             }
 
         }
-
-
-
-
-
-
-            }
-
-
 
     @Override
     public String toString() {
         return wantTopping+ " " + name + " " + type + " " + extra + price;
     }
-}
