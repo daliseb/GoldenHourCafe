@@ -23,7 +23,6 @@ public class Order {
     public Order(){
 
     }
-
     public ArrayList<SmoothieBase> getBowls() {
         return bowls;
     }
@@ -80,7 +79,7 @@ public class Order {
                    bowls.add(sb.baseOption());
                     break;
               case 2:
-                  drinks.add(j.optionForJuice());
+                  juices.add(j.optionForJuice());
 
 //                case 3 -> addSide();
 //                case 4 -> checkOut();
