@@ -34,11 +34,12 @@ public class Drizzle {
     public static Drizzle optionForDrizzle(){
         System.out.println(""""
           ----Select Your Drizzle!----
-          1.
-          2.
-          3.
-          4.
-          ");
+          1.Peanut Butter
+          2.Almond Butter
+          3.Honey
+          4.Organic Greek Yogurt
+          5.Agave
+          """);
 
 
 
