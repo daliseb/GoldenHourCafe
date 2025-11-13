@@ -2,9 +2,6 @@ package com.GoldenHourCafe.ShopItems;
 
 import com.GoldenHourCafe.UserInterface.ConsoleHelper;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Drizzle {
     private Boolean wantDrizzle; //option for drizzle
     private int type;  //what kind
@@ -33,7 +30,7 @@ public class Drizzle {
     }
 
 
-    public static Drizzle optionForDrizzle(){
+    public static Drizzle optionForDrizzle(int type){
         System.out.println("""
           ----Select Your Drizzle!----
           1.Peanut Butter
@@ -53,26 +50,36 @@ public class Drizzle {
         int choice;
         while(true) {
             choice = ConsoleHelper.promptForInt("Enter Your Drizzle Number! (please type 1-6");
-            if(choice >= 1 && <= 6) break;
+            if(choice >= 1 && choice <= 6) break;
             System.out.println("Invalid Selection! Try Again....");
-            return;
         }
 
-        int Type = switch(choice) {
-            case 1 -> "Peanut Butter";
-            case 2 -> "Almond Butter";
-            case 3 -> "Honey";
-            case 4 -> "Organic Greek Yogurt";
-            case 5 -> "Agave";
+        public static String getDrizzleName(int type)
+        switch(choice){
+            case 1 -> {
+                type = "Peanut Butter";
+            }
+            case 2 -> {
+                type = "Almond Butter";
+            }
+            case 3 -> {
+                type = "Honey";
+            }
+            case 4 -> {
+                type = "Organic Greek Yogurt";
+            }
+            case 5 -> {
+                type = "Agave";
+            }
+            default -> type = "No Drizzle Added";
+
 
         };
 
+        System.out.println();
 
 
     }
-
-
-
 
     @Override
     public String toString() {
