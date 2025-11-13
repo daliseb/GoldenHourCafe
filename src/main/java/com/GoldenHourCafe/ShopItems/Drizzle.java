@@ -7,11 +7,11 @@ import java.util.List;
 
 public class Drizzle {
     private Boolean wantDrizzle; //option for drizzle
-    private String type;  //what kind
+    private int type;  //what kind
 
     //price was deleted because the drizzle IS included in the order and acquires no additional cost.
 
-    public Drizzle(Boolean wantDrizzle, String type) {
+    public Drizzle(Boolean wantDrizzle, int type) {
         this.wantDrizzle = wantDrizzle;
         this.type = type;
     }
@@ -24,41 +24,40 @@ public class Drizzle {
         this.wantDrizzle = wantDrizzle;
     }
 
-    public String getType() {
+        public int getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(int type) {
         this.type = type;
     }
 
 
     public static Drizzle optionForDrizzle(){
-        System.out.println(""""
+        System.out.println("""
           ----Select Your Drizzle!----
           1.Peanut Butter
           2.Almond Butter
           3.Honey
           4.Organic Greek Yogurt
           5.Agave
+          6.None
           """);
 
         boolean wantDrizzle = ConsoleHelper.promptForBoolean("Would You Like Drizzle? (y/n)");
+    //following if statement, is made in case user wants no drizzle
+        if (!wantDrizzle){
+            System.out.println("No Drizzle Added");
+            return new Drizzle(false, 6);
 
+        }
+        int choice;
+        while(true) {
+            choice
 
-
+        }
 
     }
-
-
-
-
-
-
-
-
-
-
 
 
 
