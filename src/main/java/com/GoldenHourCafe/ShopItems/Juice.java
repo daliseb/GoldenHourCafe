@@ -92,7 +92,7 @@ public class Juice {
             case 2 -> 8.00; //medium
             case 3 -> 10.00; //large
             default -> 6.00; //default for small
-        }
+        };
 
     }
 random
