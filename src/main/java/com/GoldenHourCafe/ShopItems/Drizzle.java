@@ -49,12 +49,13 @@ public class Drizzle {
         if (!wantDrizzle){
             System.out.println("No Drizzle Added");
             return new Drizzle(false, 6);
-
         }
         int choice;
         while(true) {
-            choice
-
+            choice = ConsoleHelper.promptForInt("Enter Your Drizzle Number! (please type 1-6");
+            if(choice >= 1 && <= 6) break;
+            System.out.println("Invalid Selection! Try Again....");
+            return;
         }
 
     }
