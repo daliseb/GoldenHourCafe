@@ -58,29 +58,30 @@ public class Drizzle {
         System.out.println("Drizzle Has Been Added!" + " " + type);
         return new Drizzle(true, drizzleType);
     }
-        //switch case here to convert answers to a numerical value:
-        private static String getDrizzleName(int choice) {
-            return switch(choice){
-                case 1 -> "Peanut Butter";
-                case 2 ->"";
-                case 3 ->"";
-                case 4 ->"";
-                case 5 ->"";
+
+    //switch case here to convert answers to a numerical value:
+    private static String getDrizzleName(int choice) {
+        return switch (choice) {
+            case 1 -> "Peanut Butter";
+            case 2 -> "Almond Butter";
+            case 3 -> "Honey";
+            case 4 -> "Organic Greek Yogurt";
+            case 5 -> "Agave";
+            default -> "No Drizzle Added";
 
 
-            };
+        };
 
 
-        }
+    }
 
 
+    @Override
+    public String toString() {
+        return wantDrizzle + " " + type;
+    }
 
-//        @Override
-//        public String toString () {
-//    return wantDrizzle + " " + type;
-//}
-
-            }
+}
 
 
 
