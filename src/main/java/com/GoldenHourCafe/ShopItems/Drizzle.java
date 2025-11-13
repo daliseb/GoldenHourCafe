@@ -21,7 +21,7 @@ public class Drizzle {
         this.wantDrizzle = wantDrizzle;
     }
 
-    public int getType() {
+    public String getType() {
         return type;
     }
 
@@ -29,7 +29,7 @@ public class Drizzle {
         this.type = type;
     }
 
-        public static com.GoldenHourCafe.ShopItems.Drizzle optionForDrizzle(String type) {
+        public static Drizzle optionForDrizzle(String type) {
             System.out.println("""
                 ----Select Your Drizzle!----
                 1.Peanut Butter
@@ -44,7 +44,7 @@ public class Drizzle {
             //following if statement, is made in case user wants no drizzle
             if (!wantDrizzle) {
                 System.out.println("No Drizzle Added");
-                return new com.GoldenHourCafe.ShopItems.Drizzle(false, 6);
+                return new com.GoldenHourCafe.ShopItems.Drizzle(false, "None");
             }
             int choice;
             while (true) {
@@ -52,6 +52,12 @@ public class Drizzle {
                 if (choice >= 1 && choice <= 6) break;
                 System.out.println("Invalid Selection! Try Again....");
             }
+
+            String drizzleType = getDrizzleName(choice);
+            System.out.println("Juice Has Been Added To Cart!" + " " + type + " " + price
+            return
+
+
 
 
             public void int getDrizzleName (String type){
