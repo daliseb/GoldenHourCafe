@@ -58,6 +58,17 @@ public class Drizzle {
             return;
         }
 
+        int Type = switch(choice) {
+            case 1 -> "Peanut Butter";
+            case 2 -> "Almond Butter";
+            case 3 -> "Honey";
+            case 4 -> "Organic Greek Yogurt";
+            case 5 -> "Agave";
+
+        };
+
+
+
     }
 
 
