@@ -95,7 +95,7 @@ public class Juice {
         }
 
     }
-
+random
 
     @Override
     public String toString() {
