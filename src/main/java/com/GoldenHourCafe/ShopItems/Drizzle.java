@@ -4,11 +4,11 @@ import com.GoldenHourCafe.UserInterface.ConsoleHelper;
 
 public class Drizzle {
     private Boolean wantDrizzle; //option for drizzle
-    private int type;  //what kind
+    private String type;  //what kind
 
     //price was deleted because the drizzle IS included in the order and acquires no additional cost.
 
-    public Drizzle(Boolean wantDrizzle, int type) {
+    public Drizzle(Boolean wantDrizzle, String type) {
         this.wantDrizzle = wantDrizzle;
         this.type = type;
     }
@@ -25,12 +25,12 @@ public class Drizzle {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(String type) {
         this.type = type;
     }
 
 
-    public static Drizzle optionForDrizzle(int type){
+    public static Drizzle optionForDrizzle(String type){
         System.out.println("""
           ----Select Your Drizzle!----
           1.Peanut Butter
@@ -54,7 +54,9 @@ public class Drizzle {
             System.out.println("Invalid Selection! Try Again....");
         }
 
-        public static String getDrizzleName(int type)
+        String type = "";
+
+        public static String getDrizzleName(String type)
         switch(choice){
             case 1 -> {
                 type = "Peanut Butter";
@@ -71,7 +73,8 @@ public class Drizzle {
             case 5 -> {
                 type = "Agave";
             }
-            default -> type = "No Drizzle Added";
+            default ->
+                    type = "No Drizzle Added";
 
 
         };
