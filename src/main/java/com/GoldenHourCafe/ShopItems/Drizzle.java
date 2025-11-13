@@ -3,13 +3,12 @@ package com.GoldenHourCafe.ShopItems;
 public class Drizzle {
     private Boolean wantDrizzle; //option for drizzle
     private String type;  //what kind
-    private double price;
 
+    //price was deleted because the drizzle IS included in the order and acquires not additional cost.
 
-    public Drizzle(Boolean wantDrizzle, String type, double price) {
+    public Drizzle(Boolean wantDrizzle, String type) {
         this.wantDrizzle = wantDrizzle;
         this.type = type;
-        this.price = price;
     }
 
     public Boolean getWantDrizzle() {
@@ -28,17 +27,10 @@ public class Drizzle {
         this.type = type;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
 
     @Override
     public String toString() {
-        return wantDrizzle + " " + type + price;
+        return wantDrizzle + " " + type;
 
     }
 
