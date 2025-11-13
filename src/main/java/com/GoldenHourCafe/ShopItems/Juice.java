@@ -68,8 +68,11 @@ public class Juice {
             if (choice >= 1 && choice <= 4) break;
             System.out.println("Invalid Choice! Please Select (1-5)");
         }
-
-        String
+    //so i can call it in my order class
+        String type = getJuiceName(choice);
+        double price = getJuicePrice(choice);
+        System.out.println("Juice Has Been Added To Cart!" + " " + type + " " + price );
+        return new Juice(true, type, price );
 
 
     }
