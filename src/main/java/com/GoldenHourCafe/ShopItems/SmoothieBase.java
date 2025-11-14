@@ -1,14 +1,16 @@
 package com.GoldenHourCafe.ShopItems;
 import com.GoldenHourCafe.UserInterface.ConsoleHelper;
+import com.GoldenHourCafe.UserInterface.OrderItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SmoothieBase {
+//an example of polymorphism:
+public class SmoothieBase extends OrderItem {
     private String size;   //small medium large
     private String baseType;  //what kind??
     private double price;   //base price
-    private static ArrayList<Topping> toppings = new ArrayList<>();
+    private static ArrayList<Topping> toppings;
     private static Drizzle drizzle;
 
     //constructors
