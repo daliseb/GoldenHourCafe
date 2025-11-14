@@ -28,7 +28,13 @@ Code Organization and Package Structure:
 Because this application contains many different classes (such as SmoothieBase, Juice, Side, Order, ReceiptFileManager, and various user interface screens), it was important to organize them into separate packages. Creating packages allowed me to group related classes together, keep the project easier to navigate, and prevent the code from becoming messy or confusing as the application grew. You can see this with the picture above! 
 
 
+How Did I Use Obeject Oriented Programming?
+I created a parent class called OrderItem because all of my shop items (smoothies, juices, and sides) share similar information—like a name and a price. Instead of rewriting the same code in every single class, I made each item extend OrderItem.
 
+This basically means the class is borrowing the base structure from OrderItem and then adding its own unique details on top. For example, my Side class extends OrderItem, so it automatically gets the core item features, and then I only have to write the parts that make a side different.
+Using inheritance kept my code cleaner, more organized, and way easier to manage as the project got bigger! (:
+
+<img width="400" height="220" alt="Screenshot 2025-11-14 at 8 26 01 AM" src="https://github.com/user-attachments/assets/25b1e125-efe1-4c4f-8320-ef3011670abc" />
 
 
 [filemanagereipts.pdf](https://github.com/user-attachments/files/23545862/filemanagereipts.pdf)
