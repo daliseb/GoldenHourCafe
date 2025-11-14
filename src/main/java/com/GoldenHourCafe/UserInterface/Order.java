@@ -61,7 +61,7 @@ public class Order {
     //home screen(order screen) starts here:
     public void orderScreen() {
         Order order = new Order();
-        SmoothieBase sb = new SmoothieBase();
+      //  SmoothieBase sb = new SmoothieBase();
         Juice j = new Juice();
         while (true) {
             System.out.println("""
@@ -76,13 +76,18 @@ public class Order {
 
             switch (choice) {
                 case 1:
-                   bowls.add(sb.baseOption());
+                    order.getBowls().add(SmoothieBase.baseOption());
                     break;
-              case 2:
-                  juices.add(j.optionForJuice());
+                case 2:
+                    juices.add(Juice.optionForJuice(juices.size()));
+                    break;
+                case 3:
+                    sides.add(Side.optionForSide());
+                    break;
+                case 4:
+                    checkOut(order);
+                    break;
 
-//                case 3 -> addSide();
-//                case 4 -> checkOut();
                 case 0:
                     System.out.println("Exiting The Program....GoodBye!");
                     return;
@@ -91,18 +96,19 @@ public class Order {
                     break;
             }
         }
-
-
-//        //addjuice
-//        addJuice();
-//
-//
-//        //addside
-//        addSide();
-//
-//        //checkout
-//        checkOut();
     }
+    public void checkOut(Order order){
+        System.out.println("--- Checkout ---\n");
+
+        System.out.println(order.bowls);
+        System.out.println(order.getBowls());
+    }
+
+
+
+
+
+
 }
 
 

@@ -8,8 +8,8 @@ public class SmoothieBase {
     private String size;   //small medium large
     private String baseType;  //what kind??
     private double price;   //base price
-    private ArrayList<Topping> toppings = new ArrayList<>();
-    private Drizzle drizzle;
+    private static ArrayList<Topping> toppings = new ArrayList<>();
+    private static Drizzle drizzle;
 
     //constructors
     public SmoothieBase(String size, String baseType, double price, ArrayList<Topping> toppings,Drizzle drizzle) {
@@ -51,33 +51,33 @@ public class SmoothieBase {
         this.price = price;
     }
 
-    public ArrayList<Topping> getToppings() {
+    public static ArrayList<Topping> getToppings() {
         return toppings;
     }
 
-    public void setToppings(ArrayList<Topping> toppings) {
-        this.toppings = toppings;
+    public static void setToppings(ArrayList<Topping> toppings) {
+        SmoothieBase.toppings = toppings;
     }
 
-    public Drizzle getDrizzle() {
+    public static Drizzle getDrizzle() {
         return drizzle;
     }
 
     public void setDrizzle(Drizzle drizzle) {
-        this.drizzle = drizzle;
+        SmoothieBase.drizzle = drizzle;
     }
 
     //method to set the flavors of smoothie bases
-    public SmoothieBase baseOption() {
+    public static SmoothieBase baseOption() {
         SmoothieBase order = new SmoothieBase();
 
         //lines 53 and 54 were from last capstone
         System.out.println("""
                 ( --Choose Your Base:");
-                  1.Acai berry" + "(Mixed berry blend, acai, oat milk)
-                  2.Green Blend" + "(pineapple, spinach, kale, coconut water)
-                  3.Peachy Beem" + "(peach, orange juice, pineapple)
-                  4.Chocolate dream" + "(peanut butter, chocolate protein powder, almond milk, banana)
+                  1.Acai berry (Mixed berry blend, acai, oat milk)
+                  2.Green Blend (pineapple, spinach, kale, coconut water)
+                  3.Peachy Beem (peach, orange juice, pineapple)
+                  4.Chocolate dream (peanut butter, chocolate protein powder, almond milk, banana)
                   5.No Smoothie"
                   0. Exit
                 """);
@@ -92,7 +92,7 @@ public class SmoothieBase {
                 baseType = "Acai berry";
             }
             case 2 -> {
-                baseType = "Green ";
+                baseType = "Green Blend ";
             }
             case 3 -> {
                 baseType = "Peachy Beem";
