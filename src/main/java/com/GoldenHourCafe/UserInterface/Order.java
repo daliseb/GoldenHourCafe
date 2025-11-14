@@ -79,10 +79,10 @@ public class Order {
                     order.getBowls().add(SmoothieBase.baseOption());
                     break;
                 case 2:
-                    juices.add(Juice.optionForJuice(juices.size()));
+                    order.getJuices().add(Juice.optionForJuice(juices.size()));
                     break;
                 case 3:
-                    sides.add(Side.optionForSide());
+                    order.getSides().add(Side.optionForSide());
                     break;
                 case 4:
                     checkOut(order);
@@ -101,7 +101,14 @@ public class Order {
         System.out.println("--- Checkout ---\n");
 
         System.out.println(order.bowls);
-        System.out.println(order.getBowls());
+        System.out.println(order.juices);
+        System.out.println(order.sides);
+
+        for (SmoothieBase bowl : order.getBowls()) {
+            System.out.println(bowl);
+        }
+
+
     }
 
 

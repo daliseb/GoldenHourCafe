@@ -154,8 +154,7 @@ public class SmoothieBase {
 
     @Override
     public String toString() {
-        return size + " " + baseType + " $" + price;
-
+        return size + " " + baseType + " $" + price + toppings;
     }
 }
 
