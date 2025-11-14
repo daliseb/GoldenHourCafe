@@ -2,6 +2,7 @@ package com.GoldenHourCafe.ShopItems;
 import com.GoldenHourCafe.UserInterface.ConsoleHelper;
 import com.GoldenHourCafe.UserInterface.OrderItem;
 
+import java.time.temporal.JulianFields;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -91,37 +92,34 @@ public class SmoothieBase extends OrderItem {
         //default base price is 8.00 because the bowls are starting at the lowest price.
 
         switch (choice) {
-            case 1 -> {
+            case 1 ->
                 baseType = "Acai berry";
-            }
-            case 2 -> {
+
+            case 2 ->
                 baseType = "Green Blend ";
-            }
-            case 3 -> {
+            case 3 ->
                 baseType = "Peachy Beem";
-            }
-            case 4 -> {
+            case 4 ->
                 baseType = "Chocolate Dream";
-            }
-            case 5 -> {
+            case 5 ->{
                 System.out.println("No Smoothie");
                 basePrice = 0.0;
+
             }
             case 0 -> {
                 System.out.println("Exiting program, come back soon!");
-                baseOption();
+                return null;
             }
-            default -> {
+            default ->
                 System.out.println("Invalid Entry! Please try again ˙◠˙");
-            }
         }
 
         //modifying our sizes:
 
-        System.out.println("Choose a size:");
+        System.out.println("Choose a size");
         System.out.println("1. Small");
-        System.out.println("2.Medium");
-        System.out.println("3.Large");
+        System.out.println("2. Medium (+2) ");
+        System.out.println("3. Large (+4) ");
 
         int pickSize = ConsoleHelper.promptForInt("Enter Your Choice");
         String size = "";
@@ -129,17 +127,17 @@ public class SmoothieBase extends OrderItem {
 
         switch (pickSize) {
             case 1 -> {
-                size = "small";
+                size = "Small";
             }
 
             case 2 -> {
-                size = "medium";
+                size = "Medium";
                 sizeAdjustment = 2.00;
             }
 
 
             case 3 -> {
-                size = "large";
+                size = "Large";
                 sizeAdjustment = 4.00;
             }
 
@@ -151,14 +149,27 @@ public class SmoothieBase extends OrderItem {
         order.setDrizzle(Drizzle.optionForDrizzle());
 
 
-        return new SmoothieBase(size, baseType, smoothieBaseFinalPrice, getToppings(), getDrizzle());
+        return new SmoothieBase(size, baseType, smoothieBaseFinalPrice, order.getToppings(), order.getDrizzle());
 
 
     }
 
     @Override
+    public double getPrice(){
+        double total = price;
+
+        //topping prices:
+
+        for (Topping t : toppings){
+            total += t.getPrice();
+        }
+
+        return total;
+    }
+
+    @Override
     public String toString() {
-        return size + " " + baseType + " $" + price + toppings;
+        return size + " " + baseType + "$" + getPrice() + "Toppings Added: " + toppings + "Drizzle Selected:" + drizzle;
     }
 }
 

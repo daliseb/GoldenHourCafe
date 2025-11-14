@@ -1,12 +1,13 @@
 package com.GoldenHourCafe.ShopItems;
 
 import com.GoldenHourCafe.UserInterface.ConsoleHelper;
+import com.GoldenHourCafe.UserInterface.OrderItem;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Topping {
+public class Topping extends OrderItem {
     private Boolean wantTopping; //optional
     private String name;  //name of topping
     private String type; //two types of toppings, premium/regular
@@ -71,48 +72,46 @@ public class Topping {
         System.out.println("Select Your Toppings:");
 
         System.out.println("""
-                --Regular Toppings: (Included);
-                1. Cacao Nibs
-                2.Chopped Strawberries
-                3.Kiwi Slices
-                4.Mango Slices
-                5.Chopped Pineapple
-                6.Coconut Shreds
-                
-                Premium Toppings: (Prices Vary)
-                7.Sea Moss Gel
-                8.Hemp Seeds
-                9.Bee Pollen
-                10.Protein Scoop (Vanilla)
-                11.Protein Scoop (Chocolate)
-                12.Scoop Of Collagen
-                
-                """);
+              --Regular Toppings: (Included)--            --Premium Toppings: (Prices Vary)--
+                1. Cacao Nibs                              7.Sea Moss Gel
+                2.Chopped Strawberries                     8.Hemp Seeds
+                3.Kiwi Slices                              9.Bee Pollen
+                4.Mango Slices                             10.Protein Scoop (Vanilla)
+                5.Chopped Pineapple                        11.Protein Scoop (Chocolate)
+                6.Coconut Shreds                           12.Scoop Of Collagen
+             """);
 
         //while loop is needed for the user being able to choose a topping without stopping until deciding to (:
         while (true) {
-            int choice = ConsoleHelper.promptForInt("Select Your Topping, Choose 0 To Exit :");
-            if (choice == 0) break;
+            int choice = ConsoleHelper.promptForInt("Select Your Toppings, Choose 0 When Finished :");
+            if (choice == 0) break;    //user will put 0, when they are done adding toppings
 
-            Topping topping = null;
+
+            //determines whether a topping is premium or regular:
+//            Topping topping = null;
             String type = (choice <= 6) ? "Regular" : "Premium";
             double basePrice = calculateToppingPrice(size, type);
+            boolean extra = false;
+            String name = "";
 
             switch (choice) {
 
-                case 1 -> topping = new Topping(true, "Cacao Nibs", "Regular", false, basePrice);
-                case 2 -> topping = new Topping(true, "Chopped Strawberries", "Regular", false, basePrice);
-                case 3 -> topping = new Topping(true, "Kiwi Slices", "Regular", false, basePrice);
-                case 4 -> topping = new Topping(true, "Mango Slices", "Regular", false, basePrice);
-                case 5 -> topping = new Topping(true, "Chopped Pineapple", "Regular", false, basePrice);
-                case 6 -> topping = new Topping(true, "Coconut Shreds", "Regular", false, basePrice);
-                case 7 -> topping = new Topping(true, "Sea Moss Gel", "Premium", false, basePrice);
-                case 8 -> topping = new Topping(true, "Hemp Seeds", "Premium", false, basePrice);
-                case 9 -> topping = new Topping(true, "Bee Pollen", "Premium", false, basePrice);
-                case 10 -> topping = new Topping(true, "Protein Scoop (Vanilla)", "Premium", false, basePrice);
-                case 11 -> topping = new Topping(true, "Protein Scoop (Chocolate)", "Premium", false, basePrice);
-                case 12 -> topping = new Topping(true, "Scoop Of Collagen", "Premium", false, basePrice);
-                default -> System.out.println("Invalid Choice, Try Again");
+                case 1 -> name = "Cacao Nibs";
+                case 2 -> name = "Chopped Strawberries";
+                case 3 -> name = "Kiwi Slices";
+                case 4 -> name = "Mango Slices";
+                case 5 -> name = "Chopped Pineapple";
+                case 6 -> name = "Coconut Shreds";
+                case 7 -> name = "Sea Moss Gel";
+                case 8 -> name = "Hemp Seeds";
+                case 9 -> name= "Bee Pollen";
+                case 10 -> name = "Protein Scoop (Vanilla)";
+                case 11 -> name = "Protein Scoop (Chocolate)";
+                case 12 -> name = "Scoop Of Collagen";
+                default -> {
+                    System.out.println("Invalid Choice, Try Again");
+                    continue;
+                }
             }
 
 //if statement to prompt the action of calculating the prem
