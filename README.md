@@ -29,7 +29,7 @@ Because this application contains many different classes (such as SmoothieBase, 
 
 
 How Did I Use Obeject Oriented Programming?
-I created a parent class called OrderItem because all of my shop items (smoothies, juices, and sides) share similar information—like a name and a price. Instead of rewriting the same code in every single class, I made each item extend OrderItem.
+I created a parent class called OrderItem because all of my shop items (smoothies, juices, and sides) share similar information. Such as a name and a price. Instead of rewriting the same code in every single class, I made each item extend OrderItem.
 
 This basically means the class is borrowing the base structure from OrderItem and then adding its own unique details on top. For example, my Side class extends OrderItem, so it automatically gets the core item features, and then I only have to write the parts that make a side different.
 Using inheritance kept my code cleaner, more organized, and way easier to manage as the project got bigger! (:
