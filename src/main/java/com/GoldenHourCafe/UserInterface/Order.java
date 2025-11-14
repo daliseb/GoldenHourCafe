@@ -62,7 +62,7 @@ public class Order {
     public void orderScreen() {
         Order order = new Order();
       //  SmoothieBase sb = new SmoothieBase();
-        Juice j = new Juice();
+//        Juice j = new Juice();
         while (true) {
             System.out.println("""
                     ---Create Your Smoothie Bowl---
@@ -98,23 +98,34 @@ public class Order {
         }
     }
     public void checkOut(Order order){
-        System.out.println("--- Checkout ---\n");
-
-        System.out.println(order.bowls);
-        System.out.println(order.juices);
-        System.out.println(order.sides);
-
+        System.out.println("--- Checkout ---");
+        System.out.println("\nSmoothie Bowl(s): ");
         for (SmoothieBase bowl : order.getBowls()) {
-            System.out.println(bowl);
+            System.out.println("-" + bowl);
+            System.out.println("--------------------");
         }
+        System.out.println("\nJuice(s):");
+        for(Juice j : order.getJuices()){
+            System.out.println("-" + j);
+            System.out.println("--------------------");
+
+        }
+
+        System.out.println("\nSide:");
+        for(Side s : order.getSides()){
+            System.out.println("-" + s);
+            System.out.println("--------------------");
+
+        }
+
+//        System.out.println(order.bowls);
+//        System.out.println(order.juices);
+//        System.out.println(order.sides);
+
+
 
 
     }
-
-
-
-
-
 
 }
 

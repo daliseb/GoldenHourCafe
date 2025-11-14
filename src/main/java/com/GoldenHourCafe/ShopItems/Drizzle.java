@@ -1,8 +1,9 @@
 package com.GoldenHourCafe.ShopItems;
 
 import com.GoldenHourCafe.UserInterface.ConsoleHelper;
+import com.GoldenHourCafe.UserInterface.OrderItem;
 
-public class Drizzle {
+public class Drizzle{
     private Boolean wantDrizzle; //option for drizzle
     private String type;  //what kind
 
@@ -30,6 +31,7 @@ public class Drizzle {
     }
 
     public static Drizzle optionForDrizzle() {
+        boolean wantDrizzle = ConsoleHelper.promptForBoolean("Would You Like Drizzle? (y/n)");
         System.out.println("""
                 ----Select Your Drizzle!----
                 1.Peanut Butter
@@ -40,7 +42,7 @@ public class Drizzle {
                 6.None
                 """);
 
-        boolean wantDrizzle = ConsoleHelper.promptForBoolean("Would You Like Drizzle? (y/n)");
+
         //following if statement, is made in case user wants no drizzle
         if (!wantDrizzle) {
             System.out.println("No Drizzle Added");
@@ -48,14 +50,14 @@ public class Drizzle {
         }
         int choice;
         while (true) {
-            choice = ConsoleHelper.promptForInt("Enter Your Drizzle Number! (please type 1-6");
+            choice = ConsoleHelper.promptForInt("Enter Your Drizzle Number (please type 1-6");
             if (choice >= 1 && choice <= 6) break;
             System.out.println("Invalid Selection! Try Again....");
         }
 
         //following same structure as Juice class:
         String drizzleType = getDrizzleName(choice);
-        System.out.println("Drizzle Has Been Added!" + " " + getDrizzleName(choice));
+        System.out.println("Drizzle Has Been Added" + " " + getDrizzleName(choice));
         return new Drizzle(true, drizzleType);
     }
 
@@ -67,11 +69,9 @@ public class Drizzle {
             case 3 -> "Honey";
             case 4 -> "Organic Greek Yogurt";
             case 5 -> "Agave";
+            case 6 -> "None";
             default -> "No Drizzle Added";
-
-
         };
-
 
     }
 

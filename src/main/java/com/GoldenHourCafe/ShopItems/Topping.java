@@ -56,10 +56,6 @@ public class Topping extends OrderItem {
         this.extra = extra;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
     public void setPrice(double price) {
         this.price = price;
     }
@@ -177,6 +173,7 @@ public class Topping extends OrderItem {
 
     @Override
     public String toString() {
+        return name + type + (extra ? "Extra" : "") + " $" + price;
         return name + type + (extra ? "Extra" : "") + " $" + price;
     }
 }

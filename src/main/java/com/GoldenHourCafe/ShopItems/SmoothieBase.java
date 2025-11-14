@@ -46,9 +46,9 @@ public class SmoothieBase extends OrderItem {
         this.baseType = baseType;
     }
 
-    public double getPrice() {
-        return price;
-    }
+//    public double getPrice() {
+//        return price;
+//    }
 
     public void setPrice(double price) {
         this.price = price;
@@ -169,7 +169,7 @@ public class SmoothieBase extends OrderItem {
 
     @Override
     public String toString() {
-        return size + " " + baseType + "$" + getPrice() + "Toppings Added: " + toppings + "Drizzle Selected:" + drizzle;
+        return size + "\n " + baseType +"\n" + "$" + getPrice() + "\n" + "Toppings Added: " + toppings + "Drizzle Selected:" + drizzle;
     }
 }
 

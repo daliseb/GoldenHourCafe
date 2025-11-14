@@ -21,7 +21,6 @@ public class Side extends OrderItem {
 
     }
 
-
     public Boolean getWantSide() {
         return wantSide;
     }
@@ -38,9 +37,9 @@ public class Side extends OrderItem {
         this.type = type;
     }
 
-    public double getPrice() {
-        return price;
-    }
+//    public double getPrice() {
+//        return price;
+//    }
 
     public void setPrice(double price) {
         this.price = price;
@@ -48,6 +47,8 @@ public class Side extends OrderItem {
 
     //prompt the user, using the same structure from my other classes:
     public static Side optionForSide() {
+
+        boolean wantSide = ConsoleHelper.promptForBoolean("Add A Side? (y/n)");
         System.out.println("""
                 -----Choose A Side-----
                       (3.00 Each)
@@ -55,7 +56,6 @@ public class Side extends OrderItem {
                 2. Chocolate Protein Bites""");
 
 
-        boolean wantSide = ConsoleHelper.promptForBoolean("Add A Side? (y/n)");
         if (!wantSide) {
             System.out.println("No Side Added");
             return new Side(false, "None", 0.00);
@@ -68,7 +68,7 @@ public class Side extends OrderItem {
             System.out.println("Invalid Choice, Select (1-2)");
         }
 
-        //this is setting thr starting price, all sides are same price and start at $3
+        //this is setting the starting price, all sides are same price and start at $3
         String type = getSideName(choice);
         double price = 3.00;
         System.out.println("Side Has Been Added To Cart!" + " " + type + " " + price);
@@ -81,6 +81,12 @@ public class Side extends OrderItem {
             default -> "None";
         };
     }
+
+        @Override
+    public double getPrice(){
+        return price;
+        }
+
         @Override
     public String toString() {
         return wantSide + " " + type + " " + price;
