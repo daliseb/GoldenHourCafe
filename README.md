@@ -49,9 +49,10 @@ It took multiple rounds of testing, rewriting methods, and reorganizing how item
 I was able to overcome this challenge with the help of my peers.
 Thank you to Ignacio, Jaylen, Hunbal, and John for supporting me and helping me work through the tricky parts.
 
+<img width="300" height="400" alt="Screenshot 2025-11-14 at 10 36 11 AM" src="https://github.com/user-attachments/assets/e9694b34-8cdc-42d0-a50b-24057daf13ff" />
 
 
-[Golden Hour Cafe.pdf](https://github.com/user-attachments/files/23542671/Golden.Hour.Cafe.pdf)
+
 
 I created a fully interactive menu system so that my presentation would feel engaging and connected to real-world applications. Instead of showing only code or static examples, I wanted users to experience the ordering process the same way a customer would in an actual café.
 
