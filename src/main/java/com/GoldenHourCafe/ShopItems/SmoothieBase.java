@@ -168,7 +168,7 @@ public class SmoothieBase extends OrderItem {
 
     @Override
     public String toString() {
-        return size + "\n " + baseType +"\n" + "$" + getPrice() + "\n" + "Toppings Added: " + toppings + "\n" + "Drizzle Selected:" + drizzle;
+        return size + " " + baseType +"\n" + "Price: $ " + getPrice() + "\n" + "Toppings Added: " + "\n" + toppings + "\n" + "Drizzle Selected:" + drizzle + "Total: $" + getPrice() ;
     }
 }
 

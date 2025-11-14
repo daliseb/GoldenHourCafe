@@ -12,10 +12,10 @@ import java.time.format.*;
 import java.util.ArrayList;
 
 public class ReceiptFileManager {
-    public static void writeReceipt(ArrayList<SmoothieBase> bowls, ArrayList<Juice> juices, ArrayList<Side> sides, double totalPrice){
+    public static void writeReceipt(ArrayList<SmoothieBase> bowls, ArrayList<Juice> juices, ArrayList<Side> sides){
 
         // saves everything to this folder
-        File file = new File("receipts/");
+        File file = new File("Receipts");
 
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
@@ -23,9 +23,10 @@ public class ReceiptFileManager {
 
         // Creating a file name:
         String filename = time + ".txt";
-        try {
-            FileWriter fileW = new FileWriter(filename);
-            BufferedWriter bw = new BufferedWriter(fileW);
+        String filePath = file + File.separator + filename;
+
+        try(FileWriter fileW = new FileWriter(filePath);
+            BufferedWriter bw = new BufferedWriter(fileW);) {
 
             bw.write("Order ID: " + filename);
             bw.write(time);

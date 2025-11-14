@@ -1,5 +1,6 @@
 package com.GoldenHourCafe.UserInterface;
 
+import com.GoldenHourCafe.Order.ReceiptFileManager;
 import com.GoldenHourCafe.ShopItems.Juice;
 import com.GoldenHourCafe.ShopItems.Side;
 import com.GoldenHourCafe.ShopItems.SmoothieBase;
@@ -116,7 +117,11 @@ public class Order {
             System.out.println("-" + s);
             System.out.println("--------------------");
 
+
+
         }
+
+        ReceiptFileManager.writeReceipt(order.getBowls(),order.getJuices(), order.getSides());
 
 //        System.out.println(order.bowls);
 //        System.out.println(order.juices);
