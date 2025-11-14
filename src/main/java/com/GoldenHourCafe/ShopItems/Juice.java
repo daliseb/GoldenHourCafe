@@ -1,12 +1,13 @@
 package com.GoldenHourCafe.ShopItems;
 
 import com.GoldenHourCafe.UserInterface.ConsoleHelper;
+import com.GoldenHourCafe.UserInterface.OrderItem;
 
-public class Juice {
+public class Juice extends OrderItem {
     private Boolean wantDrink;  //drink is Not required, ask the user if wanted.
     private String type;   //what drink?
     private double price;
- //constructor
+    //constructor
 
 
     public Juice(Boolean wantDrink, String type, double price) {
@@ -15,7 +16,7 @@ public class Juice {
         this.price = price;
     }
 
-    public Juice(){
+    public Juice() {
 
     }
 
@@ -42,8 +43,12 @@ public class Juice {
     public void setPrice(double price) {
         this.price = price;
     }
-//prompt the user to select juice if wanted
-    public static Juice optionForJuice (int size) {
+
+    //prompt the user to select juice if wanted
+    public static Juice optionForJuice(int size) {
+
+        //first we need to ask the user whether they want a drink:
+        boolean wantDrink = ConsoleHelper.promptForBoolean("Would you like to add a drink? (y/n)");
         System.out.println("""
                 --- Cold Pressed Juice:
                 1.Green Juice
@@ -59,8 +64,7 @@ public class Juice {
                   (Strawberries, Orange Juice, Coconut water, Dates)
                 
                 """);
-        //first we need to ask the user whether they want a drink:
-        boolean wantDrink = ConsoleHelper.promptForBoolean("Would you like to add a drink? (y/n)");
+
         if (!wantDrink) {
             System.out.println("No Drink Added");
             return new Juice(false, "none", 0.00);
@@ -72,13 +76,14 @@ public class Juice {
             if (choice >= 1 && choice <= 4) break;
             System.out.println("Invalid Choice! Please Select (1-4)");
         }
-    //so I can call it in my order class
+        //so I can call it in my order class
         String type = getJuiceName(choice);
         double price = getJuicePrice(size);
 
-        System.out.println("Juice Has Been Added To Cart!" + " " + type + " " + price );
-        return new Juice(true, type, price );
+        System.out.println("Juice Has Been Added To Cart" + " " + type + " " + price);
+        return new Juice(true, type, price);
     }
+
     //switch case for juice menu choices
     private static String getJuiceName(int choice) {
         return switch (choice) {
@@ -90,8 +95,9 @@ public class Juice {
 
         };
     }
-    private static double getJuicePrice(int size){
-        return switch (size){
+
+    private static double getJuicePrice(int size) {
+        return switch (size) {
             case 1 -> 6.00; //small
             case 2 -> 8.00; //medium
             case 3 -> 10.00; //large
@@ -101,8 +107,13 @@ public class Juice {
     }
 
     @Override
+    public double getPrice() {
+        return price;
+    }
+
+    @Override
     public String toString() {
-        return wantDrink + " " + type + price;
+        return type + " $" + price;
     }
-    }
+}
 

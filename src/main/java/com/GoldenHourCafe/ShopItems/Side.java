@@ -1,8 +1,9 @@
 package com.GoldenHourCafe.ShopItems;
 
 import com.GoldenHourCafe.UserInterface.ConsoleHelper;
+import com.GoldenHourCafe.UserInterface.OrderItem;
 
-public class Side {
+public class Side extends OrderItem {
     private Boolean wantSide; //a question, sides are NOT required.
     private String type;
     private double price;
@@ -14,6 +15,12 @@ public class Side {
         this.type = type;
         this.price = price;
     }
+
+    //empty constructor
+    public Side(){
+
+    }
+
 
     public Boolean getWantSide() {
         return wantSide;

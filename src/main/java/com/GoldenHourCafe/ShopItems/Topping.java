@@ -115,26 +115,27 @@ public class Topping extends OrderItem {
             }
 
 //if statement to prompt the action of calculating the prem
-            if (topping != null && type.equals("Premium")) {
-                boolean extra = ConsoleHelper.promptForBoolean("Extra Topping? (y/n)");
+            if (type.equals("Premium")) {
+                extra = ConsoleHelper.promptForBoolean("Extra Topping? (y/n)");
 
                 if (extra) {
-                    topping.extra = true;
-                    topping.price += calculateExtraPremiumSize(size);
+                    basePrice += calculateExtraPremiumSize(size);
                 }
-
             }
+            //need method to add topping to list?????
+//            if (topping != null){
+//                toppings.add(topping);
+//                System.out.println("you have added" + topping.getName());
+//
+//
+//            }
+            Topping topping = new Topping(true, name, type, extra, basePrice);
+            toppings.add(topping);
+            System.out.println("Topping Added: " + topping.getName() + topping.getPrice() );
 
-            if (topping != null){
-                toppings.add(topping);
-                System.out.println("you have added" + topping.getName());
-
-
-            }
         }
         return toppings;
     }
-
     //need to calculate topping price:
     //size and type are being defined here:
     private static double calculateToppingPrice(int size, String type) {
@@ -143,7 +144,7 @@ public class Topping extends OrderItem {
                 case 1 -> 0.25;
                 case 2 -> 0.50;
                 case 3 -> 0.75;
-                default -> 0.00;
+                default -> 0.25;
 
             };
 
@@ -151,7 +152,7 @@ public class Topping extends OrderItem {
                 case 1 -> 0.50;
                 case 2 -> 0.75;
                 case 3 -> 1.00;
-                default -> 0.00;
+                default -> 0.50;
 
             };
 
@@ -164,15 +165,18 @@ public class Topping extends OrderItem {
             case 1 -> 0.25;
             case 2 -> 0.50;
             case 3 -> 0.75;
-            default -> 0.00;
+            default -> 0.25;
         };
 
-
+    }
+    @Override
+    public double getPrice(){
+        return price;
     }
 
 
     @Override
     public String toString() {
-        return wantTopping + " " + name + " " + type + " " + extra + price;
+        return name + type + (extra ? "Extra" : "") + " $" + price;
     }
 }
