@@ -66,7 +66,7 @@ public class Order {
 //        Juice j = new Juice();
         while (true) {
             System.out.println("""
-                    ---Create Your Smoothie Bowl---
+                    ---SELECT YOUR CHOICE---
                     1.Choose Smoothie Base
                     2.Add Fresh Juice
                     3.Add Sides

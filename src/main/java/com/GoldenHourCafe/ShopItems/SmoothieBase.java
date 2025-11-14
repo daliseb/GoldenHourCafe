@@ -76,82 +76,71 @@ public class SmoothieBase extends OrderItem {
 
         //lines 53 and 54 were from last capstone
         System.out.println("""
-                ( ---Choose Your Base---");
-                  1.Acai berry   (Mixed berry blend, acai, oat milk)
-                  2.Green Blend  (pineapple, spinach, kale, coconut water)
-                  3.Peachy Beem  (peach, orange juice, pineapple)
-                  4.Chocolate dream  (peanut butter, chocolate protein powder, almond milk, banana)
-                  5.No Smoothie
+                ( ---Choose Your Base--- );
+                  1. Acai berry      (Mixed berry blend, acai, oat milk)
+                  2. Green Blend     (pineapple, spinach, kale, coconut water)
+                  3. Peachy Beem     (peach, orange juice, pineapple)
+                  4. Chocolate dream (peanut butter, chocolate protein powder, almond milk, banana)
                   0. Exit
                 """);
         //lines 53 and 54 were from last capstone
-        int choice = ConsoleHelper.promptForInt("Enter Your Choice:");
+        int choice = ConsoleHelper.promptForInt("Enter Your Choice");
 
         String baseType = "";
         double basePrice = 8.00;
         //default base price is 8.00 because the bowls are starting at the lowest price.
 
-        switch (choice) {
-            case 1 ->
-                baseType = "Acai berry";
-            case 2 ->
-                baseType = "Green Blend ";
-            case 3 ->
-                baseType = "Peachy Beem";
-            case 4 ->
-                baseType = "Chocolate Dream";
-            case 5 ->{
-                System.out.println("No Smoothie");
-                basePrice = 0.0;
-                return null;
+
+            switch (choice) {
+                case 1 -> baseType = "Acai berry";
+                case 2 -> baseType = "Green Blend ";
+                case 3 -> baseType = "Peachy Beem";
+                case 4 -> baseType = "Chocolate Dream";
+                case 0 -> {
+                    System.out.println("Exiting program, come back soon!");
+                    return null;
+                }
+                default -> System.out.println("Invalid Entry! Please try again ˙◠˙");
+            }
+
+            //modifying our sizes:
+            System.out.println("Choose a size");
+            System.out.println("1. Small");
+            System.out.println("2. Medium (+2) ");
+            System.out.println("3. Large (+4) ");
+
+            int pickSize = ConsoleHelper.promptForInt("Enter Your Choice");
+            String size = "";
+            double sizeAdjustment = 0;
+
+
+            switch (pickSize) {
+                case 1 -> {
+                    size = "Small";
+                }
+
+                case 2 -> {
+                    size = "Medium";
+                    sizeAdjustment = 2.00;
+                }
+
+
+                case 3 -> {
+                    size = "Large";
+                    sizeAdjustment = 4.00;
+                }
 
             }
-            case 0 -> {
-                System.out.println("Exiting program, come back soon!");
-                return null;
-            }
-            default ->
-                System.out.println("Invalid Entry! Please try again ˙◠˙");
+
+            //smoothie final price is the base PLUS the adjustment size price
+            double smoothieBaseFinalPrice = basePrice + sizeAdjustment;
+            setToppings(Topping.chooseToppings(pickSize));
+            order.setDrizzle(Drizzle.optionForDrizzle());
+
+            return new SmoothieBase(size, baseType, smoothieBaseFinalPrice, getToppings(), getDrizzle());
+
+
         }
-
-        //modifying our sizes:
-
-        System.out.println("Choose a size");
-        System.out.println("1. Small");
-        System.out.println("2. Medium (+2) ");
-        System.out.println("3. Large (+4) ");
-
-        int pickSize = ConsoleHelper.promptForInt("Enter Your Choice");
-        String size = "";
-        double sizeAdjustment = 0;
-
-        switch (pickSize) {
-            case 1 -> {
-                size = "Small";
-            }
-
-            case 2 -> {
-                size = "Medium";
-                sizeAdjustment = 2.00;
-            }
-
-
-            case 3 -> {
-                size = "Large";
-                sizeAdjustment = 4.00;
-            }
-
-        }
-
-        //smoothie final price is the base PLUS the adjustment size price
-        double smoothieBaseFinalPrice = basePrice + sizeAdjustment;
-        order.setToppings(Topping.chooseToppings(pickSize));
-        order.setDrizzle(Drizzle.optionForDrizzle());
-
-        return new SmoothieBase(size, baseType, smoothieBaseFinalPrice, order.getToppings(), order.getDrizzle());
-
-
-    }
 
     @Override
     public double getPrice(){
@@ -168,7 +157,7 @@ public class SmoothieBase extends OrderItem {
 
     @Override
     public String toString() {
-        return size + " " + baseType +"\n" + "Price: $ " + getPrice() + "\n" + "Toppings Added: " + "\n" + toppings + "\n" + "Drizzle Selected:" + drizzle + "Total: $" + getPrice() ;
+        return size + " " + baseType +"\n" + "Price: $ " +getPrice() + "\n" + "Toppings Added: " + "\n" + toppings + "\n" + "Drizzle Selected:" + drizzle + "Total: $" + getPrice() ;
     }
 }
 

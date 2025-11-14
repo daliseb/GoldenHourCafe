@@ -71,7 +71,7 @@ public class Side extends OrderItem {
         //this is setting the starting price, all sides are same price and start at $3
         String type = getSideName(choice);
         double price = 3.00;
-        System.out.println("Side Has Been Added To Cart!" + " " + type + " " + price);
+        System.out.println("Side Has Been Added To Cart:" + " " + type + "   $" + price);
         return new Side(true, type, price);
     }
     private static String getSideName(int choice){
@@ -89,7 +89,7 @@ public class Side extends OrderItem {
 
         @Override
     public String toString() {
-        return wantSide + " " + type + " " + price;
+        return type + " $" + price;
     }
 }
 

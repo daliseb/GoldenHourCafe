@@ -109,7 +109,8 @@ public class Juice extends OrderItem {
 
     @Override
     public String toString() {
-        return type + " $" + price;
+        return type + " $" + String.format("%.2f", price);
+
     }
 }
 
