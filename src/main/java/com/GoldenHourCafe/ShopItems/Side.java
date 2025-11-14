@@ -50,7 +50,7 @@ public class Side extends OrderItem {
 
         boolean wantSide = ConsoleHelper.promptForBoolean("Add A Side? (y/n)");
         System.out.println("""
-                -----Choose A Side-----
+                -----⟡ Choose A Side ⟡-----
                       (3.00 Each)
                 1. Banana Oat Muffin
                 2. Chocolate Protein Bites""");

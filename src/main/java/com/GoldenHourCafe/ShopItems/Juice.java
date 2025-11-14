@@ -44,9 +44,9 @@ public class Juice extends OrderItem {
     public static Juice optionForJuice(int size) {
 
         //first we need to ask the user whether they want a drink:
-        boolean wantDrink = ConsoleHelper.promptForBoolean("Would you like to add a drink? (y/n)");
+        boolean wantDrink = ConsoleHelper.promptForBoolean("Would you like to add a drink? (y/n)\n");
         System.out.println("""
-                --- Cold Pressed Juice:
+                --------✦✦✦ Cold Pressed Juice ✦✦✦--------
                 1.Green Juice
                   (Spinach,Kale,Cucumber, Apple)
                 

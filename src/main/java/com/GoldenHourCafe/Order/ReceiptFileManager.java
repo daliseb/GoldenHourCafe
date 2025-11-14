@@ -30,24 +30,24 @@ public class ReceiptFileManager {
 
             bw.write("Order ID: " + filename);
             bw.write(time);
-            bw.write("-------------------------");
+            bw.write("-------");
 
             if(!bowls.isEmpty()){
-                bw.write("\n ----- SMOOTHIE BOWLS -----\n");
+                bw.write("\n --------ꕤ RECEIPT ꕤ-------\n");
                 for (SmoothieBase bowl : bowls) {
                     bw.write(bowl.toString());
                 }
             }
 
             if(!juices.isEmpty()){
-                bw.write("\n ----- FRESH PRESSED JUICE -----\n");
+                bw.write("\n --------ꕤ JUICE TOTAL: ꕤ--------\n");
                 for (Juice juice : juices) {
                     bw.write(juice.toString());
                 }
             }
 
             if(!sides.isEmpty()){
-                bw.write("\n ----- SIDES -----\n");
+                bw.write("\n --------ꕤ SIDES TOTAL: ꕤ------\n");
                 for (Side side : sides) {
                     bw.write(side.toString());
                 }

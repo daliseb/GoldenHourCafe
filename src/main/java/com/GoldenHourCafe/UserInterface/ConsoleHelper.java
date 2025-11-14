@@ -47,7 +47,7 @@ import java.util.Scanner;
             }
             catch(Exception ex){
                 scanner.nextLine();
-                System.out.println("Invalid Entry, please enter a whole number");
+                System.out.println("Invalid Entry! Please try again (psst.. enter a number) ˙◠˙ ");
             }
 
             //after the catch

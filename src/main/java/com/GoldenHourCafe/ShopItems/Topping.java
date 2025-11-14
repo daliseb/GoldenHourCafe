@@ -65,10 +65,11 @@ public class Topping extends OrderItem {
     public static ArrayList<Topping> chooseToppings(int size) {
         ArrayList<Topping> toppings = new ArrayList<>();
 
-        System.out.println("Select Your Toppings:");
+        System.out.println("Select Your Toppings:\n");
 
         System.out.println("""
               --Regular Toppings: (Included)--            --Premium Toppings: (Prices Vary)--
+
                 1. Cacao Nibs                              7.Sea Moss Gel
                 2.Chopped Strawberries                     8.Hemp Seeds
                 3.Kiwi Slices                              9.Bee Pollen
@@ -79,7 +80,7 @@ public class Topping extends OrderItem {
 
         //while loop is needed for the user being able to choose a topping without stopping until deciding to (:
         while (true) {
-            int choice = ConsoleHelper.promptForInt("Select Your Toppings, Choose 0 When Finished :");
+            int choice = ConsoleHelper.promptForInt("Select Your Toppings, Choose 0 When Finished");
             if (choice == 0) break;    //user will put 0, when they are done adding toppings
 
 
@@ -118,13 +119,7 @@ public class Topping extends OrderItem {
                     basePrice += calculateExtraPremiumSize(size);
                 }
             }
-            //need method to add topping to list?????
-//            if (topping != null){
-//                toppings.add(topping);
-//                System.out.println("you have added" + topping.getName());
-//
-//
-//            }
+
             Topping topping = new Topping(true, name, type, extra, basePrice);
             toppings.add(topping);
             System.out.println("Topping Added: " + topping.getName() + topping.getPrice() );
@@ -132,15 +127,15 @@ public class Topping extends OrderItem {
         }
         return toppings;
     }
-    //need to calculate topping price:
+
     //size and type are being defined here:
     private static double calculateToppingPrice(int size, String type) {
         return switch(type){
             case "Regular" -> switch (size) {
-                case 1 -> 0.25;
-                case 2 -> 0.50;
-                case 3 -> 0.75;
-                default -> 0.25;
+                case 1 -> 0.00;
+                case 2 -> 0.00;
+                case 3 -> 0.00;
+                default -> 0.00;
 
             };
 

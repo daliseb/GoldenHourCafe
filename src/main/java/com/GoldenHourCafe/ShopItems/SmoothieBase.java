@@ -76,11 +76,15 @@ public class SmoothieBase extends OrderItem {
 
         //lines 53 and 54 were from last capstone
         System.out.println("""
-                ( ---Choose Your Base--- );
+                ( ----------------❀❀❀ Choose Your Base ❀❀❀------------------ );
                   1. Acai berry      (Mixed berry blend, acai, oat milk)
+               
                   2. Green Blend     (pineapple, spinach, kale, coconut water)
+                
                   3. Peachy Beem     (peach, orange juice, pineapple)
+                
                   4. Chocolate dream (peanut butter, chocolate protein powder, almond milk, banana)
+                
                   0. Exit
                 """);
         //lines 53 and 54 were from last capstone

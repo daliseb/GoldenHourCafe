@@ -31,9 +31,9 @@ public class Drizzle{
     }
 
     public static Drizzle optionForDrizzle() {
-        boolean wantDrizzle = ConsoleHelper.promptForBoolean("Would You Like Drizzle? (y/n)");
+        boolean wantDrizzle = ConsoleHelper.promptForBoolean("Would You Like Drizzle? (y/n)\n");
         System.out.println("""
-                ----Select Your Drizzle!----
+                ----୨ৎ Select Your Drizzle ୨ৎ----
                 1.Peanut Butter
                 2.Almond Butter
                 3.Honey
@@ -52,12 +52,12 @@ public class Drizzle{
         while (true) {
             choice = ConsoleHelper.promptForInt("Enter Your Drizzle Number (please type 1-6");
             if (choice >= 1 && choice <= 6) break;
-            System.out.println("Invalid Selection! Try Again....");
+            System.out.println("Invalid Entry! Please try again ˙◠˙");
         }
 
         //following same structure as Juice class:
         String drizzleType = getDrizzleName(choice);
-        System.out.println("Drizzle Has Been Added" + " " + getDrizzleName(choice));
+        System.out.println(getDrizzleName(choice) + " " + "Drizzle Has Been Added"  );
         return new Drizzle(true, drizzleType);
     }
 
@@ -78,7 +78,7 @@ public class Drizzle{
 
     @Override
     public String toString() {
-        return wantDrizzle + " " + type;
+        return type;
     }
 
 }

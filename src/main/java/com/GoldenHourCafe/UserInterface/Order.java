@@ -66,14 +66,14 @@ public class Order {
 //        Juice j = new Juice();
         while (true) {
             System.out.println("""
-                    ---SELECT YOUR CHOICE---
-                    1.Choose Smoothie Base
-                    2.Add Fresh Juice
-                    3.Add Sides
-                    4.Check Out
-                    0.Cancel
+                    -------✿✿✿ SELECT YOUR CHOICE ✿✿✿-------
+                              1.Choose Smoothie Base
+                              2.Add Fresh Juice
+                              3.Add Sides
+                              4.Check Out
+                              0.Cancel
                     """);
-            int choice = ConsoleHelper.promptForInt("Select Your Option!");
+            int choice = ConsoleHelper.promptForInt("Select Your Option");
 
             switch (choice) {
                 case 1:
@@ -90,10 +90,10 @@ public class Order {
                     break;
 
                 case 0:
-                    System.out.println("Exiting The Program....GoodBye!");
+                    System.out.println("Exiting Program.....Come Back Soon! ♡ ");
                     return;
                 default:
-                    System.out.println("Invalid Answer....Try Again!");
+                    System.out.println("Invalid Entry! Please try again ˙◠˙");
                     break;
             }
         }

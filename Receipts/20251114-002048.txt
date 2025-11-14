@@ -1,9 +1,0 @@
-Order ID: 20251114-002048.txt20251114-002048-------------------------
- ----- SMOOTHIE BOWLS -----
-Large Acai berry
-Price: $ 12.75
-Toppings Added: 
-[Chopped Strawberries
-Regular
- $0.75]
-Drizzle Selected:true HoneyTotal: $12.75--
