@@ -75,7 +75,6 @@ public class Drizzle{
 
     }
 
-
     @Override
     public String toString() {
         return type;
