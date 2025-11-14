@@ -94,7 +94,6 @@ public class SmoothieBase extends OrderItem {
         switch (choice) {
             case 1 ->
                 baseType = "Acai berry";
-
             case 2 ->
                 baseType = "Green Blend ";
             case 3 ->
@@ -104,6 +103,7 @@ public class SmoothieBase extends OrderItem {
             case 5 ->{
                 System.out.println("No Smoothie");
                 basePrice = 0.0;
+                return null;
 
             }
             case 0 -> {
@@ -148,7 +148,6 @@ public class SmoothieBase extends OrderItem {
         order.setToppings(Topping.chooseToppings(pickSize));
         order.setDrizzle(Drizzle.optionForDrizzle());
 
-
         return new SmoothieBase(size, baseType, smoothieBaseFinalPrice, order.getToppings(), order.getDrizzle());
 
 
@@ -169,7 +168,7 @@ public class SmoothieBase extends OrderItem {
 
     @Override
     public String toString() {
-        return size + "\n " + baseType +"\n" + "$" + getPrice() + "\n" + "Toppings Added: " + toppings + "Drizzle Selected:" + drizzle;
+        return size + "\n " + baseType +"\n" + "$" + getPrice() + "\n" + "Toppings Added: " + toppings + "\n" + "Drizzle Selected:" + drizzle;
     }
 }
 

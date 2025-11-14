@@ -173,7 +173,7 @@ public class Topping extends OrderItem {
 
     @Override
     public String toString() {
-        return name + type + (extra ? "Extra" : "") + " $" + price;
-        return name + type + (extra ? "Extra" : "") + " $" + price;
+        return name + "\n" +  type + "\n" + (extra ? "Extra" : "") + " $" + price;
+        //return name + type + "Extra" + " $" + price;
     }
 }
