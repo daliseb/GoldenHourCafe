@@ -24,7 +24,7 @@ public class SmoothieBase extends OrderItem {
 
     }
     public SmoothieBase(){
-
+        this.toppings = new ArrayList<>(); //I want to initilize toppings list
     }
 
 
@@ -75,12 +75,12 @@ public class SmoothieBase extends OrderItem {
 
         //lines 53 and 54 were from last capstone
         System.out.println("""
-                ( --Choose Your Base:");
-                  1.Acai berry (Mixed berry blend, acai, oat milk)
-                  2.Green Blend (pineapple, spinach, kale, coconut water)
-                  3.Peachy Beem (peach, orange juice, pineapple)
-                  4.Chocolate dream (peanut butter, chocolate protein powder, almond milk, banana)
-                  5.No Smoothie"
+                ( ---Choose Your Base---");
+                  1.Acai berry   (Mixed berry blend, acai, oat milk)
+                  2.Green Blend  (pineapple, spinach, kale, coconut water)
+                  3.Peachy Beem  (peach, orange juice, pineapple)
+                  4.Chocolate dream  (peanut butter, chocolate protein powder, almond milk, banana)
+                  5.No Smoothie
                   0. Exit
                 """);
         //lines 53 and 54 were from last capstone
@@ -89,6 +89,7 @@ public class SmoothieBase extends OrderItem {
         String baseType = "";
         double basePrice = 8.00;
         //default base price is 8.00 because the bowls are starting at the lowest price.
+
         switch (choice) {
             case 1 -> {
                 baseType = "Acai berry";
@@ -108,6 +109,7 @@ public class SmoothieBase extends OrderItem {
             }
             case 0 -> {
                 System.out.println("Exiting program, come back soon!");
+                baseOption();
             }
             default -> {
                 System.out.println("Invalid Entry! Please try again ˙◠˙");
